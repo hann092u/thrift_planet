@@ -4,3 +4,19 @@
   --brand-color-purple: #a75df2;
   --brand-color-green: #00df00;
 }
+h2 {
+  font-family: "Alata", sans-serif;
+  font-size: 4rem;
+}
+h3 {
+  font-family: "Alata", sans-serif;
+  font-size: 2rem;
+  color: black;
+}
+a {
+  font-family: "Alata", sans-serif;
+}
+
+p {
+  font-family: "Dosis", sans-serif;
+}
