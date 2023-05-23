@@ -1,0 +1,31 @@
+---
+import Drop_card from "./Drop_card.astro";
+---
+
+<div class="grid_1-1-1">
+  <div class="center">
+    <Drop_card img="./img/blåring.webp" image="./img/blåring_forside.webp/" title="Blå ring med sten" price="149 DKK" />
+  </div>
+  <div class="center">
+    <Drop_card img="./img/skal_hvid.webp" image="./img/skal_hvid_forside.webp/" title="Halskæde med vedhæng" price="149 DKK" />
+  </div>
+  <div class="center">
+    <Drop_card img="./img/klemme_pastelgul.webp" image="./img/klemme_pastelgul_forside.webp/" title="Hårklemme i pastel gul" price="120 DKK" />
+  </div>
+</div>
+
+<style>
+  .grid_1-1-1 {
+    display: grid;
+    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--bg-pink);
+  }
+
+  .center {
+    width: 70%;
+  }
+</style>
