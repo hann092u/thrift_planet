@@ -11,10 +11,8 @@ const { image, animation, title } = Astro.props;
       <h1>{title}</h1>
     </div>
 
-    <div id="cirkel_container" class="container_animation">
-      <div id="cirkel_sprite">
-        <img class="animation_size" src={animation} alt="" />
-      </div>
+    <div class="container_animation">
+      <img class="animation_size" src={animation} alt="" />
     </div>
   </div>
 </header>
@@ -55,6 +53,7 @@ const { image, animation, title } = Astro.props;
     width: 40%;
     justify-content: center;
     align-items: center;
+    animation: cirkelAnimation 10s infinite;
   }
 
   #cirkel_container {
@@ -68,19 +67,16 @@ const { image, animation, title } = Astro.props;
     background-size: cover;
   }
 
-  .spin {
-    animation-name: spin_kf;
-    animation-duration: 4s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-  }
-
-  @keyframes spin_kf {
-    from {
+  @keyframes cirkelAnimation {
+    0% {
       rotate: 0;
     }
 
-    to {
+    50% {
+      rotate: 180deg;
+    }
+
+    100% {
       rotate: 360deg;
     }
   }
