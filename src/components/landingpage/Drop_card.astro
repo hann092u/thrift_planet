@@ -1,0 +1,43 @@
+---
+const { title, link, img, image, price } = Astro.props;
+---
+
+<div>
+  <div class="img_hover">
+    <a href={link}><img class="image_top" src={img} alt="" /></a>
+    <img src={image} alt="" />
+    <p>{title}</p>
+    <p>{price}</p>
+  </div>
+</div>
+
+<style>
+  img {
+    border-radius: 50%;
+    border: solid 6px white;
+  }
+
+  p {
+    color: black;
+    text-align: center;
+  }
+
+  .img_hover {
+    width: 100%;
+    height: 100%;
+    margin-top: 40px;
+    position: relative;
+  }
+
+  .img_hover img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .image_top {
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+  }
+</style>
