@@ -1,18 +1,24 @@
 ---
 import Drop_card from "./Drop_card.astro";
+import Button from "../Button.astro";
 ---
 
-<div class="grid_1-1-1">
-  <div class="center">
-    <Drop_card img="./img/blåring.webp" image="./img/blåring_forside.webp/" title="Blå ring med sten" price="149 DKK" />
+<section class="drop_bg">
+  <div class="grid_1-1-1">
+    <div class="center">
+      <Drop_card img="./img/blåring.webp" image="./img/blåring_forside.webp/" title="Blå ring med sten" price="149 DKK" />
+    </div>
+    <div class="center">
+      <Drop_card img="./img/skal_hvid.webp" image="./img/skal_hvid_forside.webp/" title="Halskæde med vedhæng" price="149 DKK" />
+    </div>
+    <div class="center">
+      <Drop_card img="./img/klemme_pastelgul.webp" image="./img/klemme_pastelgul_forside.webp/" title="Hårklemme i pastel gul" price="120 DKK" />
+    </div>
   </div>
-  <div class="center">
-    <Drop_card img="./img/skal_hvid.webp" image="./img/skal_hvid_forside.webp/" title="Halskæde med vedhæng" price="149 DKK" />
+  <div class="button">
+    <Button title="GÅ TIL SHOPPEN" />
   </div>
-  <div class="center">
-    <Drop_card img="./img/klemme_pastelgul.webp" image="./img/klemme_pastelgul_forside.webp/" title="Hårklemme i pastel gul" price="120 DKK" />
-  </div>
-</div>
+</section>
 
 <style>
   .grid_1-1-1 {
@@ -22,10 +28,46 @@ import Drop_card from "./Drop_card.astro";
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: var(--bg-pink);
   }
 
   .center {
     width: 70%;
+    margin: 10px;
+  }
+
+  .drop_bg {
+    background-color: var(--bg-pink);
+    padding-bottom: 20%;
+  }
+
+  .button {
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  @media (min-width: 800px) {
+    .grid_1-1-1 {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      background-color: var(--bg-pink);
+    }
+
+    .drop_bg {
+      background-color: var(--bg-pink);
+      padding-bottom: 7%;
+    }
+
+    .button {
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    .center {
+      width: 70%;
+      margin: 50px;
+    }
   }
 </style>
