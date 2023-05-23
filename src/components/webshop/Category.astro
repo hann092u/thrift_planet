@@ -1,0 +1,36 @@
+---
+const { title, image } = Astro.props;
+---
+
+<section>
+  <a href="productlist.html">
+    <img src={image} alt="billede" />
+    <div class="text">
+      <span><h2>{title}</h2></span>
+    </div>
+  </a>
+</section>
+<style>
+  section {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    width: 100%;
+  }
+  a {
+    text-decoration: none;
+  }
+  h2 {
+    text-align: center;
+  }
+  img {
+    width: 100%; /* Set the desired width for the images */
+    border: 6px solid white;
+    border-radius: 50%;
+  }
+  .text {
+    color: white;
+    transform: translate(0, -250%);
+    cursor: pointer;
+  }
+</style>
