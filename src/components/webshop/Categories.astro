@@ -1,0 +1,33 @@
+---
+import Category from "./Category.astro";
+const { title } = Astro.props;
+---
+
+<div class="container">
+  <img src="./img/" alt="" />
+  <h2>{title}</h2>
+  <div class="categories">
+    <Category title="RINGE" image="./img/general/ringe.webp" />
+    <Category title="HÅRSPÆNDER" image="./img/general/haaspaender.webp" />
+    <Category title="HALSKÆDER" image="./img/general/halsklaede.webp" />
+  </div>
+</div>
+<style>
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--bg);
+  }
+  h2 {
+    align-self: center;
+    color: white;
+  }
+  @media (min-width: 600px) {
+    .categories {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+    }
+  }
+</style>

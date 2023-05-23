@@ -1,0 +1,33 @@
+---
+const { title, link } = Astro.props;
+---
+
+<div class="center">
+  <a href={link}><span>{title}</span></a>
+</div>
+<style>
+  a {
+    width: 100%;
+    border: none;
+    background: transparent;
+    align-items: center;
+    gap: 1rem;
+    text-decoration: none;
+  }
+  span {
+    color: white;
+    background-color: var(--brand-color-green);
+    border-radius: 30px;
+    padding: 12px 40px;
+    font-weight: bolder;
+    cursor: pointer;
+    position: relative;
+    font-size: 1.2rem;
+    box-sizing: border-box;
+    border: 4px solid var(--brand-color-green);
+  }
+
+  span:hover {
+    border: 4px solid var(--brand-color-purple);
+  }
+</style>
