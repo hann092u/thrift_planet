@@ -1,10 +1,25 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
-import Button from "../components/Button.astro";
 import Categories from "../components/webshop/Categories.astro";
+import Product_Card from "../components/webshop/Product_Card.astro";
 ---
 
 <MainLayout title="Webshop">
   <Categories title="KATEGORIER" />
-  <Button link="/#" />
+  <div class="all_products">
+    <h2>ALLE PRODUKTER</h2>
+    <Product_Card title="HEART" description="Halskæde med vedhæng" price="149 DKK" />
+    <Product_Card />
+    <Product_Card />
+  </div>
 </MainLayout>
+
+<style>
+  .all_products {
+    background-color: var(--bg-pink);
+  }
+  h2 {
+    padding: 2rem;
+    color: var(--brand-color-purple);
+  }
+</style>

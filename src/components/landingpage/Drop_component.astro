@@ -1,9 +1,11 @@
 ---
 import Drop_card from "./Drop_card.astro";
 import Button from "../Button.astro";
+const { title } = Astro.props;
 ---
 
 <section class="drop_bg">
+  <span><h2>{title}</h2></span>
   <div class="grid_1-1-1">
     <div class="center">
       <Drop_card img="./img/blåring.webp" image="./img/blåring_forside.webp/" title="Blå ring med sten" price="149 DKK" />
@@ -43,6 +45,11 @@ import Button from "../Button.astro";
   .button {
     text-align: center;
     margin-top: 20px;
+  }
+
+  span {
+    text-align: center;
+    color: var(--brand-color-purple);
   }
 
   @media (min-width: 800px) {
