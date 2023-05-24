@@ -10,8 +10,8 @@
   <ul>
     <li><a href="/omos">OM OS</a></li>
     <li class="logo-drop">
-      <a href="/"><img src="/img/general/Logo_smiley.svg" alt="logo" /></a>
       <li><a href="/kontakt">KONTAKT & FAQ</a></li>
+      <a class="logo" href="/"><img src="/img/general/Logo_smiley.svg" alt="logo" /></a>
       <li><a href="/webshop">WEBSHOP</a></li>
       <li><a href="/#">KURV</a></li>
     </li>
@@ -25,9 +25,8 @@
     display: grid;
     grid-template-columns: auto 1fr;
   }
-  .kune_logo {
-    float: rigtht;
-    width: 50px;
+  .logo {
+    width: 8rem;
     margin: 20px;
   }
 
@@ -36,17 +35,18 @@
   }
   ul li {
     font-family: "Alata";
-    font-size: 2rem;
+    font-size: 1.5rem;
     margin-right: 20px;
   }
 
   li a {
     color: white;
     text-decoration: none;
+    border: 4px solid transparent;
+    border-radius: 45px;
+    padding: 4px 55px;
   }
-  #menu {
-    float: left;
-  }
+
   #menu ul {
     display: flex;
     align-items: center;
@@ -55,11 +55,9 @@
   }
 
   #menu a:hover {
-    color: white;
-  }
-
-  img:hover {
-    filter: brightness(100);
+    border: 4px solid var(--brand-color-purple);
+    border-radius: 45px;
+    padding: 4px 55px;
   }
 
   #burger-menu {
@@ -85,7 +83,7 @@
     #burger-menu span,
     #burger-menu span:before,
     #burger-menu span:after {
-      background: rgba(253, 132, 32, 1);
+      background: white;
       display: block;
       height: 3px;
       opacity: 1;
