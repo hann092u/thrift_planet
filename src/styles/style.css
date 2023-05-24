@@ -7,7 +7,9 @@ img {
   width: 100%;
   height: auto;
 }
-
+body {
+  background-color: var(--bg-pink);
+}
 :root {
   --bg: #dac5f2;
   --bg-pink: #f9eaed;
