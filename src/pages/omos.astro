@@ -1,0 +1,16 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import Indehaver_card from "../components/omos/Indehaver_card.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<MainLayout title="OM OS">
+  <Header image="/omos/mette.png" />
+  <Indehaver_card image="/img/omos/mette.png" title="METTE" />
+  <p>tekst om Mette</p>
+  <Indehaver_card image="/img/omos/Ann_Sofie.png" title="ANN-SOFIE" />
+  <p>tekst om Ann-Sofie</p>
+  <img src="/img/omos/tidslinje.png" alt="tidslinje" />
+  <Footer />
+</MainLayout>
