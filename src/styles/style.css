@@ -7,23 +7,34 @@ img {
   width: 100%;
   height: auto;
 }
-body {
-  background-color: var(--bg);
-}
+
 :root {
   --bg: #dac5f2;
   --bg-pink: #f9eaed;
   --brand-color-purple: #a75df2;
   --brand-color-green: #00df00;
+  --prod-text: #7c7c7c;
 }
 h2 {
   font-family: "Alata", sans-serif;
-  font-size: 4rem;
+  font-size: 3rem;
+  text-align: center;
 }
 h3 {
   font-family: "Alata", sans-serif;
   font-size: 2rem;
   color: black;
+}
+
+h4 {
+  font-family: "Alata", sans-serif;
+  font-size: 2rem;
+  color: black;
+}
+h5 {
+  font-family: "Alata", sans-serif;
+  font-size: 1rem;
+  color: var(--prod-text);
 }
 a {
   font-family: "Alata", sans-serif;

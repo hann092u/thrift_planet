@@ -3,15 +3,17 @@ import Category from "./Category.astro";
 const { title } = Astro.props;
 ---
 
+<img class="sky_up" src="./img/general/banner2.svg" alt="banner" />
 <div class="container">
-  <img src="./img/" alt="" />
   <h2>{title}</h2>
   <div class="categories">
+    <Category title="HÅRSPÆNDER" image="./img/general/haarspaender.webp" />
     <Category title="RINGE" image="./img/general/ringe.webp" />
-    <Category title="HÅRSPÆNDER" image="./img/general/haaspaender.webp" />
-    <Category title="HALSKÆDER" image="./img/general/halsklaede.webp" />
+    <Category title="HALSKÆDER" image="./img/general/halsklaeder.webp" />
   </div>
 </div>
+<img class="sky_down" src="./img/general/bannerdown.svg" alt="banner" />
+
 <style>
   .container {
     display: flex;
@@ -22,8 +24,20 @@ const { title } = Astro.props;
   h2 {
     align-self: center;
     color: white;
+    margin-bottom: 2rem;
   }
-  @media (min-width: 600px) {
+  .sky_up {
+    width: 103%;
+    margin-bottom: -2.5rem;
+    margin-inline: -1rem;
+  }
+  .sky_down {
+    width: 103.5%;
+    left: -2%;
+    margin-top: -2.5rem;
+    margin-inline: -1rem;
+  }
+  @media (min-width: 800px) {
     .categories {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
