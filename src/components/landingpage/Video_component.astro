@@ -1,0 +1,54 @@
+---
+const { title, image1, image2 } = Astro.props;
+---
+
+<div>
+  <img class="sky_up" src={image1} alt="" />
+</div>
+<div class="container">
+  <h2>{title}</h2>
+  <div>
+    <img class="sky_down" src="/header/purple_header_banner.png" alt="" />
+  </div>
+</div>
+<img src={image2} alt="" />
+
+<style>
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--bg);
+    margin-top: -20px;
+  }
+  h2 {
+    align-self: center;
+    color: white;
+    margin-bottom: 2rem;
+  }
+  .sky_up {
+    width: 100%;
+    margin-top: -40px;
+  }
+  .sky_down {
+    width: 100%;
+    margin-top: -40px;
+  }
+
+  @media (min-width: 800px) {
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: var(--bg);
+      margin-top: -60px;
+    }
+    .sky_up {
+      width: 116%;
+      margin-inline: -1rem;
+      margin-top: -129px;
+      transform: translateX(-5%);
+      overflow: hidden;
+    }
+  }
+</style>
