@@ -8,10 +8,10 @@ const { title, image1, image2 } = Astro.props;
 <div class="container">
   <h2>{title}</h2>
   <div>
-    <img class="sky_down" src="/header/purple_header_banner.png" alt="" />
+    <img src="/header/purple_header_banner.png" alt="" />
   </div>
 </div>
-<img src={image2} alt="" />
+<img class="sky_down" src={image2} alt="" />
 
 <style>
   .container {
@@ -32,7 +32,7 @@ const { title, image1, image2 } = Astro.props;
   }
   .sky_down {
     width: 100%;
-    margin-top: -40px;
+    margin-top: -12px;
   }
 
   @media (min-width: 800px) {
@@ -49,6 +49,13 @@ const { title, image1, image2 } = Astro.props;
       margin-top: -129px;
       transform: translateX(-5%);
       overflow: hidden;
+    }
+
+    .sky_down {
+      width: 116%;
+      margin-inline: -1rem;
+      margin-top: -55px;
+      transform: translateX(-5%);
     }
   }
 </style>
