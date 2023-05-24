@@ -53,18 +53,18 @@ const { image, animation, title } = Astro.props;
     width: 40%;
     justify-content: center;
     align-items: center;
-    animation: cirkelAnimation 10s infinite;
   }
 
-  #cirkel_container {
+  .animation_container {
     width: 100%;
     aspect-ratio: 10/10;
   }
 
-  #cirkel_sprite {
+  .animation_size {
     width: 100%;
     height: 100%;
     background-size: cover;
+    animation: cirkelAnimation 10s infinite;
   }
 
   @keyframes cirkelAnimation {
