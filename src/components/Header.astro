@@ -1,0 +1,119 @@
+---
+const { image, animation, title } = Astro.props;
+---
+
+<header>
+  <div>Menu</div>
+
+  <div class="grid_2-1">
+    <div class="container_text">
+      <img class="size" src={image} alt="" />
+      <h1>{title}</h1>
+    </div>
+
+    <div class="container_animation">
+      <img class="animation_size" src={animation} alt="" />
+    </div>
+  </div>
+</header>
+
+<style>
+  .grid_2-1 {
+    display: grid;
+    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  header {
+    background-image: url("/img/general/gradient_background.svg");
+    z-index: 4;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100vh;
+  }
+
+  .container_text {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin-top: 60px;
+    justify-content: center;
+    align-items: center;
+  }
+  .container_animation {
+    display: flex;
+    flex-direction: row;
+    margin-right: 40px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    width: 40%;
+    justify-content: center;
+    align-items: center;
+    animation: cirkelAnimation 10s infinite;
+  }
+
+  #cirkel_container {
+    width: 100%;
+    aspect-ratio: 10/10;
+  }
+
+  #cirkel_sprite {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+  }
+
+  @keyframes cirkelAnimation {
+    0% {
+      rotate: 0;
+    }
+
+    50% {
+      rotate: 180deg;
+    }
+
+    100% {
+      rotate: 360deg;
+    }
+  }
+
+  @media (min-width: 800px) {
+    .grid_2-1 {
+      display: grid;
+      grid-template-columns: 4fr 1fr;
+      grid-template-rows: auto;
+    }
+
+    header {
+      background-image: url("/img/general/gradient_background.svg");
+      z-index: 4;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      width: 100%;
+      height: 100vh;
+    }
+    .container_animation {
+      margin-top: 20px;
+      margin-bottom: 350px;
+      width: 100%;
+    }
+    .container_text {
+      width: 100%;
+      margin-top: 30px;
+    }
+    .size {
+      width: 80%;
+    }
+    .animation_size {
+      width: 100%;
+      margin-right: 70px;
+    }
+  }
+</style>
+
+<script src="/animation.js"></script>
