@@ -1,0 +1,14 @@
+---
+const { title, image } = Astro.props;
+---
+
+<div>
+  <img src={image} alt="" />
+  <p>{title}</p>
+</div>
+
+<style>
+  image {
+    width: 100%;
+  }
+</style>
