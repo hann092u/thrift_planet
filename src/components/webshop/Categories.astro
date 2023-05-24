@@ -24,17 +24,18 @@ const { title } = Astro.props;
   h2 {
     align-self: center;
     color: white;
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
   }
   .sky_up {
-    width: 103%;
-    margin-bottom: -2.5rem;
+    padding-left: 3%;
+    width: 104.5%;
+    margin-bottom: -1.5rem;
     margin-inline: -1rem;
   }
   .sky_down {
-    width: 103.5%;
-    left: -2%;
-    margin-top: -2.5rem;
+    padding-left: 3%;
+    width: 104.5%;
+    margin-top: -1rem;
     margin-inline: -1rem;
   }
   @media (min-width: 800px) {
@@ -42,6 +43,16 @@ const { title } = Astro.props;
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 30px;
+    }
+    .sky_up {
+      width: 103.5%;
+      margin-bottom: -2.5rem;
+      margin-inline: -1rem;
+    }
+    .sky_down {
+      width: 104.5%;
+      margin-top: -1rem;
+      margin-inline: -1rem;
     }
   }
 </style>

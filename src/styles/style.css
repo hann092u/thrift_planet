@@ -10,6 +10,9 @@ img {
 body {
   background-color: var(--bg-pink);
 }
+main {
+  overflow: hidden;
+}
 :root {
   --bg: #dac5f2;
   --bg-pink: #f9eaed;

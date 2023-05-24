@@ -2,16 +2,29 @@
 import MainLayout from "../layouts/MainLayout.astro";
 import Categories from "../components/webshop/Categories.astro";
 import Product_Card from "../components/webshop/Product_Card.astro";
+import Header from "../components/Header.astro";
+const url = "https://xajsthxggqgaudpivnrd.supabase.co/rest/v1/thrift_planet";
+const options = {
+  headers: {
+    apikey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InhhanN0aHhnZ3FnYXVkcGl2bnJkIiwicm9sZSI6ImFub24iLCJpYXQiOjE2ODQ4NzE1MDgsImV4cCI6MjAwMDQ0NzUwOH0.HQ2wFMdKd1M2pYndgzr5dgo2DM4qSQgYHbFZwmQeb9k",
+  },
+};
+const response = await fetch(url, options);
+const data = await response.json();
+console.log(data);
 ---
 
 <MainLayout title="Webshop">
-  <Categories title="KATEGORIER" />
-  <div class="all_products">
-    <h2>ALLE PRODUKTER</h2>
-    <Product_Card title="HEART" description="Halskæde med vedhæng" price="149 DKK" />
-    <Product_Card />
-    <Product_Card />
-  </div>
+  <Header image="./img/general/header_webshop.webp" />
+  <main>
+    <Categories title="KATEGORIER" />
+    <div class="all_products">
+      <h2>ALLE PRODUKTER</h2>
+      <div class="products">
+        {data.map((product) => <Product_Card image1={`/img/${product.image1}`} name={product.name} description={product.description} price={product.price} />)}
+      </div>
+    </div>
+  </main>
 </MainLayout>
 
 <style>
