@@ -1,0 +1,88 @@
+---
+import Instagram_card from "./Instagram_card.astro";
+---
+
+<h2>MÅNEDENS FOTO FRA JER <br />#planetstyle</h2>
+
+<div class="container">
+  <div class="text">
+    <p>HUSK AT VI TRÆKKER LOD HVER MÅNED OM ET GAVEKORT PÅ 200KR TIL BUTIKKEN. DET BEDSTE BILLEDE FRA JER I VORES TØJ LÆGGES OP OP PÅ VORES WEBSITE OG PÅ VORES INSTAGRAM @THRIFT_PLANET.</p>
+  </div>
+  <div class="card1">
+    <Instagram_card img="/img/insta1.webp" link="https://www.instagram.com/p/CmL3YDtMGMx/" />
+  </div>
+  <div class="card2">
+    <Instagram_card img="/img/insta2.webp" link="https://www.instagram.com/p/Cn39K7CsX6Q/" />
+  </div>
+  <div class="card3">
+    <Instagram_card img="/img/insta3.webp" link="https://www.instagram.com/p/CpZ0p97Mi5h/" />
+  </div>
+</div>
+
+<style>
+  .container {
+    display: grid;
+    grid-template-columns: 0.5fr 2fr 0.5fr;
+    grid-template-rows: 0.5fr 1.5fr 1.5fr 1.5fr;
+    row-gap: 20px;
+  }
+
+  .text {
+    grid-column: 1/4;
+    grid-row: 1;
+    text-align: center;
+  }
+  .card1 {
+    grid-column: 2;
+    grid-row: 2;
+  }
+  .card2 {
+    grid-column: 2;
+    grid-row: 3;
+  }
+
+  .card3 {
+    grid-column: 2;
+    grid-row: 4;
+  }
+
+  p {
+    margin: 10px;
+    text-align: center;
+  }
+
+  h2 {
+    margin: 20px;
+    color: var(--brand-color-purple);
+  }
+
+  @media (min-width: 800px) {
+    .container {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 0.2fr 1fr 0.5fr;
+      column-gap: 20px;
+    }
+
+    .text {
+      grid-column: 2;
+      grid-row: 1;
+      text-align: center;
+    }
+    .card1 {
+      margin-left: 30px;
+      grid-column: 1;
+      grid-row: 2;
+    }
+    .card2 {
+      grid-column: 2;
+      grid-row: 2;
+    }
+
+    .card3 {
+      margin-right: 30px;
+      grid-column: 3;
+      grid-row: 2;
+    }
+  }
+</style>
