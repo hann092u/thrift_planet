@@ -1,0 +1,17 @@
+---
+import MainLayout from "../../layouts/MainLayout.astro";
+import Product_Card from "../../components/webshop/Product_Card.astro";
+const url = "https://xajsthxggqgaudpivnrd.supabase.co/rest/v1/thrift_planet?category=eq.ring";
+const options = {
+  headers: {
+    apikey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InhhanN0aHhnZ3FnYXVkcGl2bnJkIiwicm9sZSI6ImFub24iLCJpYXQiOjE2ODQ4NzE1MDgsImV4cCI6MjAwMDQ0NzUwOH0.HQ2wFMdKd1M2pYndgzr5dgo2DM4qSQgYHbFZwmQeb9k",
+  },
+};
+const response = await fetch(url, options);
+const data = await response.json();
+console.log(data);
+---
+
+<MainLayout>
+  {data.map((product) => <Product_Card image1={`../img/${product.image1}`} name={product.name} description={product.description} price={product.price + " DKK"} />)}
+</MainLayout>
