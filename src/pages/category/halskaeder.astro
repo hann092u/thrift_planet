@@ -1,6 +1,7 @@
 ---
 import MainLayout from "../../layouts/MainLayout.astro";
-import Product_Card from "../../components/webshop/Product_Card.astro";
+import Product from "../../components/webshop/Product.astro";
+import Menu from "../../components/Menu.astro";
 const url = "https://xajsthxggqgaudpivnrd.supabase.co/rest/v1/thrift_planet?category=eq.necklace";
 const options = {
   headers: {
@@ -13,5 +14,6 @@ console.log(data);
 ---
 
 <MainLayout>
-  {data.map((product) => <Product_Card image1={`../img/${product.image1}`} name={product.name} description={product.description} price={product.price + " DKK"} />)}
+  <Menu />
+  {data.map((product) => <Product image1={`../img/${product.image1}`} name={product.name} description={product.description} price={product.price + " DKK"} />)}
 </MainLayout>
