@@ -1,9 +1,9 @@
 ---
-const { title, image } = Astro.props;
+const { title, image, page } = Astro.props;
 ---
 
 <section>
-  <a href="productlist.html">
+  <a href={page}>
     <img src={image} alt="billede" />
     <div class="text">
       <span><h2>{title}</h2></span>
