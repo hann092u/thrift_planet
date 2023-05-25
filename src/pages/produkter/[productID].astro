@@ -1,0 +1,67 @@
+---
+export async function getStaticPaths() {
+  const url = "https://uqqrfignuxyaogcxautj.supabase.co/rest/v1/Testimonials";
+
+  const api = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InVxcXJmaWdudXh5YW9nY3hhdXRqIiwicm9sZSI6ImFub24iLCJpYXQiOjE2ODE0NTU5OTksImV4cCI6MTk5NzAzMTk5OX0.FrC343CmVCw8w5fWd3KEeT9N5uSROAJDXMIzKt4qbNw";
+  const options = {
+    method: "GET",
+    headers: {
+      apikey: api,
+    },
+  };
+  const data = await fetch(url, options).then((res) => res.json());
+
+  return data.map((singleTestimonial) => {
+    return {
+      params: { id: singleTestimonial.title + "-" + singleTestimonial.id },
+      props: { singleTestimonial },
+    };
+  });
+}
+import Navigation from "../../components/webshop/Navigation.astro";
+import MainLayout from "../../layouts/MainLayout.astro";
+import Button_2 from "../../components/Button_2.astro";
+const { data } = Astro.props;
+---
+
+<MainLayout>
+  <Navigation />
+  <div class="container">
+    <div class="product">
+      <img src={data.image1} alt="billede" />
+      <h4>{data.name}</h4>
+      <h5>{data.description}</h5>
+
+      <h5 class="price">{data.price}</h5>
+    </div>
+    <div class="button">
+      <Button_2 title="LÆG I KURV" />
+    </div>
+  </div>
+
+  <style>
+    .button {
+      margin-block: 40px;
+    }
+
+    .product {
+      padding-inline: 2rem;
+      padding-top: 2rem;
+      padding-bottom: 1rem;
+      border-radius: 15px;
+    }
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+    img {
+      border-radius: 15px;
+      filter: brightness(1.1);
+    }
+    .price {
+      margin-top: 1rem;
+    }
+  </style>
+</MainLayout>

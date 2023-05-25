@@ -4,7 +4,7 @@ const { name, description, price, image1 } = Astro.props;
 ---
 
 <div class="container">
-  <a href="./product.astro">
+  <a href="./product">
     <div class="product">
       <img src={image1} alt="billede" />
       <h4>{name}</h4>
@@ -28,6 +28,9 @@ const { name, description, price, image1 } = Astro.props;
     padding-top: 2rem;
     padding-bottom: 1rem;
     border-radius: 15px;
+  }
+  a {
+    text-decoration: none;
   }
   .container {
     display: flex;
