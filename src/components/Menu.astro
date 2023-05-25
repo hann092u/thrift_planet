@@ -26,8 +26,7 @@
     grid-template-columns: auto 1fr;
   }
   .logo {
-    width: 5rem;
-    margin: 20px;
+    width: 10%;
   }
 
   ul {
@@ -44,20 +43,30 @@
     text-decoration: none;
     border: 4px solid transparent;
     border-radius: 45px;
-    padding: 4px 55px;
+    padding: 4px 20px;
+    text-align: center;
   }
 
   #menu ul {
     display: flex;
-    align-items: center;
+    align-items: top;
     gap: 20px 40px;
+    margin-top: 1rem;
     margin: 20px;
+    justify-content: space-between;
   }
-
+  .logo-drop {
+    display: none;
+  }
   #menu a:hover {
     border: 4px solid var(--brand-color-purple);
     border-radius: 45px;
-    padding: 4px 55px;
+    padding: 4px 20px;
+  }
+  #menu .logo:hover {
+    border: none;
+    padding: 0;
+    filter: brightness(1.2);
   }
 
   #burger-menu {
@@ -69,11 +78,34 @@
     cursor: pointer;
     height: 27px;
     width: 27px;
-    position: relative;
+    position: absolute;
+    top: 0;
+    right: 0;
     z-index: 2;
   }
 
-  @media screen and (max-width: 900px) {
+  /* Rest of the CSS */
+
+  @media (max-width: 1180px) {
+    ul li {
+      font-size: 1rem;
+    }
+    #menu a:hover {
+      border: 4px solid var(--brand-color-purple);
+      border-radius: 45px;
+      padding: 4px 10px;
+    }
+
+    li a {
+      color: white;
+      text-decoration: none;
+      border: 4px solid transparent;
+      border-radius: 45px;
+      padding: 4px 10px;
+      text-align: center;
+    }
+  }
+  @media screen and (max-width: 800px) {
     .logo-drop {
       display: none;
     }
@@ -110,13 +142,13 @@
       top: 0px;
       transform: rotate(90deg);
       width: 27px;
-      background: rgba(253, 132, 32, 1);
+      background: white;
     }
     #burger-menu.close span {
       transform: rotate(-45deg);
       top: 13px;
       width: 27px;
-      background: rgba(253, 132, 32, 1);
+      background: white;
     }
     #burger-menu.close span:after {
       top: 0px;
@@ -124,7 +156,7 @@
       transform: rotate(90deg);
       opacity: 0;
       width: 0;
-      background: rgba(253, 132, 32, 1);
+      background: var(--brand-color-purple);
     }
     #menu {
       z-index: 1;
@@ -143,7 +175,10 @@
       visibility: visible;
       opacity: 1;
       padding-top: 100px;
-      background: rgba(0, 0, 0, 0.8);
+      background: var(--bg);
+    }
+    .logo {
+      width: 15%;
     }
     #menu ul {
       padding: 0;
@@ -158,7 +193,7 @@
       display: initial;
     }
     #menu a {
-      color: rgba(253, 132, 32, 1);
+      color: white;
       display: block;
       font-size: 20px;
       margin-bottom: 30px;

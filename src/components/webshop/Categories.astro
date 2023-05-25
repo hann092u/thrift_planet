@@ -3,17 +3,18 @@ import Category from "./Category.astro";
 const { title } = Astro.props;
 ---
 
-<img class="sky_up" src="./img/general/banner2.svg" alt="banner" />
-<div class="container">
-  <h2>{title}</h2>
-  <div class="categories">
-    <Category title="HÅRSPÆNDER" image="./img/general/haarspaender.webp" />
-    <Category title="RINGE" image="./img/general/ringe.webp" />
-    <Category title="HALSKÆDER" image="./img/general/halsklaeder.webp" />
+<section>
+  <div class="container">
+    <h2>{title}</h2>
+    <div class="categories">
+      <Category title="HÅRSPÆNDER" image="./img/general/haarspaender.webp" />
+      <Category title="RINGE" image="./img/general/ringe.webp" />
+      <Category title="HALSKÆDER" image="./img/general/halsklaeder.webp" />
+    </div>
   </div>
-</div>
-<img class="sky_down" src="./img/general/bannerdown.svg" alt="banner" />
 
+  <img class="sky_down" src="./img/general/bannerdown.png" alt="banner" />
+</section>
 <style>
   .container {
     display: flex;
@@ -26,11 +27,7 @@ const { title } = Astro.props;
     color: white;
     margin-bottom: 1.5rem;
   }
-  .sky_up {
-    width: 104.5%;
-    margin-bottom: -1.5rem;
-    margin-inline: -1rem;
-  }
+
   .sky_down {
     width: 104.5%;
     margin-top: -1rem;
@@ -42,13 +39,10 @@ const { title } = Astro.props;
       grid-template-columns: repeat(3, 1fr);
       gap: 30px;
     }
-    .sky_up {
-      width: 103.5%;
-      margin-bottom: -2.5rem;
-    }
+
     .sky_down {
       width: 104.5%;
-      margin-top: -1rem;
+      margin-top: -5rem;
     }
   }
 </style>
