@@ -1,9 +1,43 @@
 ---
 import Navigation from "./Navigation.astro";
+import Button_2 from "../Button_2.astro";
+const { name, description, price, image1 } = Astro.props;
 ---
 
-<Navigation />
+<div class="container">
+  <div class="product">
+    <img src={image1} alt="billede" />
+    <h4>{name}</h4>
+    <h5>{description}</h5>
+    <h5 class="price">{price}</h5>
+  </div>
+  <div class="button">
+    <Button_2 title="LÆG I KURV" />
+  </div>
+</div>
 
-<section>
-  <img src="" alt="" />
-</section>
+<style>
+  .button {
+    margin-block: 40px;
+  }
+
+  .product {
+    padding-inline: 2rem;
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+    border-radius: 15px;
+  }
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  img {
+    border-radius: 15px;
+    filter: brightness(1.1);
+  }
+  .price {
+    margin-top: 1rem;
+  }
+</style>
