@@ -7,10 +7,28 @@ import Footer from "../components/Footer.astro";
 
 <MainLayout title="OM OS">
   <Header image="/omos/mette.png" />
-  <Indehaver_card image="/img/omos/mette.png" title="METTE" />
-  <p>tekst om Mette</p>
-  <Indehaver_card image="/img/omos/Ann_Sofie.png" title="ANN-SOFIE" />
-  <p>tekst om Ann-Sofie</p>
-  <img src="/img/omos/tidslinje.png" alt="tidslinje" />
+  <article class="grid_3_2_3">
+    <div class="mette">
+      <Indehaver_card image="/img/omos/mette.png" title="METTE" />
+      <p>tekst om Mette</p>
+    </div>
+    <div class="ann_sofie">
+      <Indehaver_card image="/img/omos/Ann_Sofie.png" title="ANN-SOFIE" />
+      <p>tekst om Ann-Sofie</p>
+    </div>
+    <img src="/img/omos/tidslinje.png" alt="tidslinje" />
+  </article>
   <Footer />
 </MainLayout>
+
+<style>
+  grid_3_2_3 {
+    display: grid;
+    grid-template-columns: 3fr 2fr 3fr;
+    grid-template-rows: 1fr (4);
+  }
+
+  .mette {
+    grid-row: span 2;
+  }
+</style>
