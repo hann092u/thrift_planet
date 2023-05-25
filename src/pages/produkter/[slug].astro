@@ -1,0 +1,59 @@
+---
+export async function getStaticPaths() {
+  const url = "https://xajsthxggqgaudpivnrd.supabase.co/rest/v1/thrift_planet";
+  const options = {
+    headers: {
+      apikey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InhhanN0aHhnZ3FnYXVkcGl2bnJkIiwicm9sZSI6ImFub24iLCJpYXQiOjE2ODQ4NzE1MDgsImV4cCI6MjAwMDQ0NzUwOH0.HQ2wFMdKd1M2pYndgzr5dgo2DM4qSQgYHbFZwmQeb9k",
+    },
+  };
+  const data = await fetch(url, options).then((res) => res.json());
+
+  return data.map((singleProduct) => {
+    return {
+      params: { slug: singleProduct.slug },
+      props: { singleProduct },
+    };
+  });
+}
+import Navigation from "../../components/webshop/Navigation.astro";
+import MainLayout from "../../layouts/MainLayout.astro";
+import Button_2 from "../../components/Button_2.astro";
+import ProductCard from "../../components/webshop/Product_Card.astro";
+const { singleProduct } = Astro.props;
+---
+
+<MainLayout>
+  <div class="product">
+    <img src={singleProduct.image1} alt="billede" />
+    <h4>{singleProduct.name}</h4>
+    <h5>{singleProduct.description}</h5>
+    <h5 class="price">{singleProduct.price}</h5>
+  </div>
+  <Button_2 title="LÆG I KURV" />
+</MainLayout>
+
+<style>
+  .button {
+    margin-block: 40px;
+  }
+
+  .product {
+    padding-inline: 2rem;
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+    border-radius: 15px;
+  }
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  img {
+    border-radius: 15px;
+    filter: brightness(1.1);
+  }
+  .price {
+    margin-top: 1rem;
+  }
+</style>
