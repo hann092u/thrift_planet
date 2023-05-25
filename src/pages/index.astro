@@ -4,19 +4,20 @@ import Button from "../components/Button.astro";
 import Drop_component from "../components/landingpage/Drop_component.astro";
 import Header from "../components/Header.astro";
 import Video_component from "../components/landingpage/Video_component.astro";
+import News from "../components/landingpage/News.astro";
 ---
 
 <MainLayout title="Thrift planet">
   <Header image="/header/purple_header_banner.png" animation="/img/general/animation.svg">
     <img class="desktop" src="/img/general/bg_gradientcloud.svg" alt="" />
-    <img class="mobil" src="/img/general/bg_mobil.png" alt="" />
+    <img class="mobil" src="/img/general/bg_mobil.svg" alt="" />
   </Header>
   <main>
     <Video_component image2="/img/general/bannerdown.svg" />
     <Drop_component title="NYESTE DROP I SHOPPEN" />
-    <Button title="LÆS MERE" link="/webshop" />
-    <a href="/omos">Gå til om os</a>
-    <a href="/kontakt">Gå til kontakt</a>
+    <News>
+      <img class="bg_image" src="/img/general/gradient_background.svg" alt="" />
+    </News>
   </main>
 </MainLayout>
 
@@ -27,6 +28,10 @@ import Video_component from "../components/landingpage/Video_component.astro";
 
   .mobil {
     display: block;
+  }
+
+  .bg_image {
+    filter: blur(5px);
   }
 
   @media (min-width: 800px) {

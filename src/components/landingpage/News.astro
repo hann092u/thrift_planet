@@ -1,0 +1,93 @@
+---
+const { title, link } = Astro.props;
+import Button_2 from "../Button_2.astro";
+---
+
+<form action="signup" method="post">
+  <div class="baggrund"><slot /></div>
+  <div class="signup">
+    <h2>PLANET MAIL</h2>
+    <p>SIGN UP TIL VORES NYHEDSBREV OG FÅ 10% RABAT TIL DIT NÆSTE KØB HOS ENTEN THRIFTPLANETS FYSISKE BUTIK ELLER I VORES WEBSHOP</p>
+  </div>
+  <div class="nameholder">
+    <label for="name"></label>
+    <input placeholder="Navn" type="text" id="name" name="name" required />
+  </div>
+
+  <div class="emailholder">
+    <label for="email"></label>
+    <input placeholder="E-mail" type="email" id="email" name="email" required />
+  </div>
+
+  <div class="button">
+    <Button_2 title="SIGN UP" link="/" />
+  </div>
+</form>
+
+<style>
+  form {
+    display: grid;
+    grid-template-columns: 0.5fr 1fr 0.5fr;
+    grid-template-rows: 0.7fr 0.3fr 0.3fr 0.5fr;
+  }
+
+  .baggrund {
+    width: 200%;
+    grid-column: 1/4;
+    grid-row: 1/5;
+  }
+
+  .signup {
+    grid-column: 1/4;
+    grid-row: 1/2;
+    z-index: 1;
+  }
+
+  .nameholder {
+    grid-column: 2;
+    grid-row: 2/3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    margin-bottom: 10px;
+  }
+  .emailholder {
+    grid-column: 2;
+    grid-row: 3/4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    margin-top: 10px;
+  }
+
+  .button {
+    grid-column: 1/4;
+    grid-row: 4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  p {
+    text-align: center;
+    margin-top: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  h2 {
+    margin-top: 20px;
+  }
+
+  input {
+    border-radius: 30px;
+    padding: 12px 40px;
+    border: none;
+  }
+
+  :placeholder-shown {
+    font-family: Alata;
+  }
+</style>
