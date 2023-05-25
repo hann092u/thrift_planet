@@ -15,13 +15,16 @@ console.log(data);
 ---
 
 <MainLayout title="Webshop">
-  <Header image="./img/general/header_webshop.webp" />
+  <Header title="WEBSHOP" animation="/img/general/animation.svg">
+    <img class="desktop" src="./img/general/header_webshop.webp" alt="baggrund" />
+    <img class="mobil" src="/img/general/bg_mobil.png" alt="baggrund" />
+  </Header>
   <main>
     <Categories title="KATEGORIER" />
     <div class="all_products">
       <h2>ALLE PRODUKTER</h2>
       <div class="products">
-        {data.map((product) => <Product_Card image1={`/img/${product.image1}`} name={product.name} description={product.description} price={product.price} />)}
+        {data.map((product) => <Product_Card image1={`/img/${product.image1}`} name={product.name} description={product.description} price={product.price + " DKK"} />)}
       </div>
     </div>
   </main>
@@ -34,5 +37,29 @@ console.log(data);
   h2 {
     padding: 2rem;
     color: var(--brand-color-purple);
+  }
+  .desktop {
+    display: none;
+  }
+
+  .mobil {
+    display: block;
+  }
+
+  @media (min-width: 800px) {
+    .desktop {
+      display: block;
+    }
+    .mobil {
+      display: none;
+    }
+
+    .products {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+      margin-inline: 5rem;
+      margin-block: 3rem;
+    }
   }
 </style>

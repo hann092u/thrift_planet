@@ -20,6 +20,13 @@ main {
   --brand-color-green: #00df00;
   --prod-text: #7c7c7c;
 }
+h1 {
+  font-family: "Alata", sans-serif;
+  font-size: 5rem;
+  text-align: center;
+  color: white;
+  font-weight: 200;
+}
 h2 {
   font-family: "Alata", sans-serif;
   font-size: 2rem;
@@ -53,5 +60,8 @@ p {
   h2 {
     font-size: 2.6rem;
     margin-top: 2rem;
+  }
+  h1 {
+    font-size: 8rem;
   }
 }
