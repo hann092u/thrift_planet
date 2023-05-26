@@ -1,0 +1,63 @@
+---
+const { title, image1, image2 } = Astro.props;
+---
+
+<div class="grid_1">
+  <div class="tekst_planet">
+    <h2>{title}</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus hic voluptatibus voluptates odit asperiores dolorem at, alias fugit atque non deserunt ullam quae tempora inventore fugiat temporibus animi quibusdam eius.</p>
+  </div>
+  <div class="planet">
+    <img src="/omos/velkommen_planet.png" alt="velkommen" />
+  </div>
+</div>
+
+<img class="sky_down" src={image2} alt="sky ned" />
+
+<style>
+  .grid_1 {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-row: 0.5fr 3fr 1fr;
+    background-color: var(--bg);
+  }
+
+  .planet {
+    margin: 20px;
+  }
+
+  h2 {
+    color: white;
+  }
+
+  p {
+    text-align: center;
+  }
+
+  .tekst_indhold {
+  }
+
+  @media (min-width: 800px) {
+    .grid_1 {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr;
+      grid-row: 0.5fr 2fr 0.5fr;
+      background-color: var(--bg);
+    }
+
+    .tekst_planet {
+      grid-column: 2;
+      grid-row: 2;
+      margin-top: 40px;
+    }
+
+    .planet {
+      grid-column: 1;
+      grid-row: 2;
+    }
+
+    p {
+      margin-top: 20px;
+    }
+  }
+</style>

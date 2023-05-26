@@ -1,13 +1,43 @@
 ---
-const { title, img, link } = Astro.props;
+import Info_cards from "../kontakt/Info_cards.astro";
 ---
 
-<div>
-  <a href={link}><img class="kontakt" src={img} alt="kontakt" /><h2>{title}</h2></a>
+<div class="overskrift"><h2>INFORMATION</h2></div>
+<div class="grid_1_1">
+  <div class="kontakt1"><Info_cards title="FORSENDELSE" image="/kontakt/kontakt333.png" /></div>
+  <div class="kontakt2"><Info_cards title="RETURPOLITIK" image="/kontakt/kontakt222.png" /></div>
+  <div class="kontakt3"><Info_cards title="SMYKKEPLEJE" image="/kontakt/kontakt111.png" /></div>
+  <div class="kontakt4"><Info_cards title="GAVEKORT" image="/kontakt/kontakt44.png" /></div>
 </div>
-
 <style>
+  .grid_1_1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    color: white;
+  }
+
+  .kontakt1 {
+    grid-column: 1;
+    grid-row: 1;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .kontakt2 {
+    grid-column: 2;
+    grid-row: 1;
+  }
+  .kontakt3 {
+    grid-column: 1;
+    grid-row: 2;
+  }
+  .kontakt4 {
+    grid-column: 2;
+    grid-row: 2;
+  }
+
   img {
-    border: solid 6px white;
+    width: 100%;
   }
 </style>

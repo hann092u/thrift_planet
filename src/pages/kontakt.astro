@@ -3,27 +3,32 @@ import MainLayout from "../layouts/MainLayout.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import Info_card from "../components/kontakt/Info_card.astro";
+import Adresse from "../components/kontakt/Adresse.astro";
 ---
 
-<MainLayout title="OM OS">
-  <Header image="/omos/mette.png" />
-  <h2>BESØG OS NEDE I BUTIKKEN</h2>
-  <img src="/kontakt/kontakt1111.png" alt="skilt" />
-  <h3>
-    STUDIESTRÆDE 24, KL. TH <br />
-    1455 KØBENHAVN K <br />
-    MAN - FRE 12-18 <br />
-    LØR 12-17 <br />
-    THRIFTPLANET@HOTMAIL.COM
-  </h3>
-  <Info_card title="FORSENDELSE" img="/kontakt/kontakt1111.png" />
-  <Info_card title="RETURPOLITIK" img="/kontakt/kontakt3333.png" />
-  <Info_card title="SMYKKEPLEJE" img="/kontakt/kontakt2222.png" />
-  <Info_card title="GAVEKORT" img="/kontakt/kontakt4444.png" />
-  <Footer />
+<MainLayout title="KONTAKT">
+  <Header title="KONTAKT" animation="/img/general/animation.svg">
+    <img class="desktop" src="./img/general/omos_header.png" alt="baggrund" />
+    <img class="mobil" src="/img/general/bg_mobil.png" alt="baggrund" />
+  </Header>
+  <main>
+    <Adresse title="BESØG OS NEDE I BUTIKKEN" image2="/img/general/bannerdown.png" />
+    <Info_card />
+    <Footer />
+  </main>
 </MainLayout>
 
 <style>
+  .desktop {
+    display: none;
+  }
+
+  .mobil {
+    display: block;
+  }
+  .blur {
+    filter: blur(5px);
+  }
   p {
     font-size: 51pt;
     color: white;

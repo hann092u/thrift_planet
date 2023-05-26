@@ -4,12 +4,15 @@ const { title, image } = Astro.props;
 
 <div>
   <img src={image} alt="" />
-  <p>{title}</p>
+  <h2>{title}</h2>
 </div>
 
 <style>
-  image {
+  img {
     width: 100%;
-    border: solid 6px white;
+  }
+
+  h2 {
+    margin: 5px;
   }
 </style>
