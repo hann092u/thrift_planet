@@ -1,8 +1,16 @@
+:root {
+  --bg: #dac5f2;
+  --bg-pink: #f9eaed;
+  --brand-color-purple: #a75df2;
+  --brand-color-green: #00df00;
+  --prod-text: #7c7c7c;
+}
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
+
 img {
   width: 100%;
   height: auto;
@@ -13,13 +21,7 @@ body {
 main {
   overflow: hidden;
 }
-:root {
-  --bg: #dac5f2;
-  --bg-pink: #f9eaed;
-  --brand-color-purple: #a75df2;
-  --brand-color-green: #00df00;
-  --prod-text: #7c7c7c;
-}
+
 h1 {
   font-family: "Alata", sans-serif;
   font-size: 4.5rem;

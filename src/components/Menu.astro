@@ -10,7 +10,7 @@
     <li><a href="/omos">OM OS</a></li>
     <li class="logo-drop">
       <li><a href="/kontakt">KONTAKT & FAQ</a></li>
-      <li>
+      <li class="logo_li">
         <a href="/"><img class="logo" src="/img/general/Logo_smiley.svg" alt="logo" /></a>
       </li>
       <li><a href="/webshop">WEBSHOP</a></li>
@@ -26,9 +26,11 @@
     display: grid;
     grid-template-columns: auto 1fr;
   }
-
+  a {
+    white-space: nowrap;
+  }
   img {
-    width: 30%;
+    width: 100%;
   }
   ul {
     list-style: none;
@@ -84,7 +86,9 @@
     right: 0;
     z-index: 2;
   }
-
+  .logo_li {
+    width: 50px;
+  }
   /* Rest of the CSS */
 
   @media (max-width: 1180px) {
@@ -96,7 +100,12 @@
       border-radius: 45px;
       padding: 4px 10px;
     }
-
+    img {
+      width: 100%;
+    }
+    .logo_li {
+      width: 50px;
+    }
     li a {
       color: white;
       text-decoration: none;
@@ -191,7 +200,7 @@
       background: var(--bg);
     }
     .logo {
-      width: 15%;
+      width: 10%;
     }
     #menu ul {
       padding: 0;

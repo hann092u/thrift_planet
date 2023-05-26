@@ -1,0 +1,53 @@
+---
+import Button_2 from "../Button_2.astro";
+const { name, description, price, image1, slug } = Astro.props;
+---
+
+<div class="container">
+  <a href={`../produkter/${slug}`}>
+    <div class="product">
+      <img src={image1} alt="billede" />
+      <h4>{name}</h4>
+      <h5>{description}</h5>
+      <h5 class="price">{price}</h5>
+    </div>
+  </a>
+  <div class="button">
+    <Button_2 title="LÆG I KURV" />
+  </div>
+</div>
+
+<style>
+  .button {
+    margin-block: 40px;
+  }
+
+  .product {
+    border: 4px solid white;
+    padding-inline: 2rem;
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+    border-radius: 15px;
+  }
+  a {
+    text-decoration: none;
+  }
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-block: 2rem;
+    margin-inline: 4rem;
+  }
+  img {
+    border-radius: 15px;
+    filter: brightness(1.1);
+  }
+  .price {
+    margin-top: 1rem;
+  }
+  .product:hover {
+    border: 4px solid var(--brand-color-purple);
+  }
+</style>
