@@ -1,0 +1,44 @@
+---
+const { title, image, link } = Astro.props;
+---
+
+<div class="kontakt1">
+  <a href={link}
+    ><img src={image} />
+    <div class="tekst1">
+      <span><h2>{title}</h2></span>
+    </div></a
+  >
+</div>
+
+<style>
+  .kontakt1 {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    width: 100%;
+  }
+  a {
+    text-decoration: none;
+  }
+  h2 {
+    text-align: center;
+    font-size: 1rem;
+    color: white;
+  }
+
+  span {
+  }
+
+  img {
+    width: 100%;
+  }
+  .tekst1 {
+    color: white;
+    transform: translate(0, -400%);
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+</style>

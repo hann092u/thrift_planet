@@ -1,0 +1,81 @@
+---
+const { title, image2 } = Astro.props;
+---
+
+<div class="overskrift">
+  <h2>{title}</h2>
+</div>
+
+<div class="grid_1">
+  <div class="adresse">
+    <p>
+      STUDIESTRÆDE 24, KL. TH <br />
+      1455 KØBENHAVN K <br />
+      MAN - FRE 12-18 <br />
+      LØR 12-17 <br />
+      THRIFTPLANET@HOTMAIL.COM
+    </p>
+  </div>
+
+  <div class="skilt">
+    <img src="/kontakt/kontakt333.png" alt="skilt" />
+  </div>
+</div>
+
+<img class="sky_down" src={image2} alt="sky ned" />
+
+<style>
+  .grid_1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    background-color: var(--bg);
+  }
+
+  h2 {
+    color: white;
+    background-color: var(--bg);
+  }
+
+  p {
+    text-align: center;
+  }
+
+  .adresse {
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  .skilt {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  img {
+    width: 100%;
+  }
+
+  @media (min-width: 800px) {
+    .grid_1 {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr;
+      grid-row: 0.5fr 2fr 0.5fr;
+      background-color: var(--bg);
+    }
+
+    .adresse {
+      grid-column: 2;
+      grid-row: 2;
+      margin-top: 40px;
+    }
+
+    .skilt {
+      grid-column: 1;
+      grid-row: 1/2;
+    }
+
+    p {
+      margin-top: 20px;
+    }
+  }
+</style>

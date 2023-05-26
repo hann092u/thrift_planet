@@ -1,0 +1,81 @@
+---
+import Indehaver_card from "./Indehaver_card.astro";
+---
+
+<div class="grid_1_3_1">
+  <div class="mette">
+    <Indehaver_card image="/omos/mette.png" title="METTE" />
+  </div>
+  <div class="tekst1">
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quisquam minus asperiores, atque fugiat doloremque possimus quia nam deserunt est totam modi laudantium ad enim consequuntur similique iure pariatur. Illo, at? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea illum assumenda totam officia quis, deleniti perferendis amet harum in accusamus necessitatibus expedita asperiores ipsa, aliquid esse? Dignissimos eveniet aliquam perferendis.</p>
+  </div>
+  <div class="ann_sofie">
+    <Indehaver_card image="/omos/Ann_Sofie.png" title="ANN-SOFIE" />
+  </div>
+  <div class="tekst2">
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Commodi reprehenderit ullam exercitationem adipisci eveniet corporis illo odit, iusto eligendi quae nobis nemo praesentium unde temporibus rem quidem nostrum porro quasi. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eligendi eos quisquam nostrum ad cum, fuga sequi ab ex veritatis, ratione repellendus assumenda! Voluptate et culpa at, ipsam sit modi esse!</p>
+  </div>
+</div>
+
+<style>
+  .grid_1_3_1 {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+  }
+
+  .mette {
+    grid-column: 2;
+    grid-row: 1;
+    color: #a75df2;
+  }
+
+  .tekst1 {
+    grid-column: 2;
+    grid-row: 2;
+  }
+
+  .ann_sofie {
+    grid-column: 2;
+    grid-row: 3;
+    color: #a75df2;
+  }
+
+  .tekst2 {
+    grid-column: 2;
+    grid-row: 4;
+  }
+
+  @media (min-width: 800px) {
+    .grid_1_3_1 {
+      display: grid;
+      grid-template-columns: 0.25fr 1fr 1fr 1fr 0.25fr;
+      grid-template-rows: 1fr 1fr;
+    }
+
+    .mette {
+      grid-column: 2;
+      grid-row: 1;
+      margin-top: 150px;
+    }
+
+    .tekst1 {
+      grid-column: 3/5;
+      grid-row: 1;
+      margin-top: 250px;
+      margin-left: 50px;
+    }
+
+    .ann_sofie {
+      grid-column: 4;
+      grid-row: 2;
+    }
+
+    .tekst2 {
+      grid-column: 2/4;
+      grid-row: 2;
+      margin-top: 150px;
+      margin-right: 100px;
+    }
+  }
+</style>
