@@ -1,5 +1,6 @@
 ---
 const { title, image1, image2 } = Astro.props;
+import Button from "../Button.astro";
 ---
 
 <div>
@@ -8,7 +9,10 @@ const { title, image1, image2 } = Astro.props;
 <div class="container">
   <h2>{title}</h2>
   <div>
-    <img src="/header/purple_header_banner.png" alt="" />
+    <img class="video" src="/header/purple_header_banner.png" alt="" />
+  </div>
+  <div class="vis">
+    <Button title="LÆS MERE" />
   </div>
 </div>
 <img class="sky_down" src={image2} alt="" />
