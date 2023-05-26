@@ -1,6 +1,7 @@
 ---
 import MainLayout from "../../layouts/MainLayout.astro";
 import ProductCardCategory from "../../components/webshop/ProductCardCategory.astro";
+import MenuBackgr from "../../components/MenuBackgr.astro";
 const url = "https://xajsthxggqgaudpivnrd.supabase.co/rest/v1/thrift_planet?category=eq.ringe";
 const options = {
   headers: {
@@ -13,6 +14,7 @@ console.log(data);
 ---
 
 <MainLayout>
+  <MenuBackgr />
   <div class="products">
     {data.map((product) => <ProductCardCategory image1={`/img/${product.image1}`} name={product.name} description={product.description} price={product.price + " DKK"} slug={product.slug} />)}
   </div>

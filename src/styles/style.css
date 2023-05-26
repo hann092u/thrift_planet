@@ -36,7 +36,7 @@ h2 {
 }
 h3 {
   font-family: "Alata", sans-serif;
-  font-size: 2rem;
+  font-size: 1.2rem;
   color: black;
   margin-top: 1rem;
 }
@@ -48,10 +48,15 @@ h4 {
 }
 h5 {
   font-family: "Alata", sans-serif;
+  font-size: 1.4rem;
+}
+h6 {
+  font-family: "Alata", sans-serif;
   font-size: 1rem;
   color: var(--prod-text);
   margin-top: 0.5rem;
 }
+
 a {
   font-family: "Alata", sans-serif;
 }
@@ -66,5 +71,8 @@ p {
   }
   h1 {
     font-size: 8rem;
+  }
+  h3 {
+    font-size: 1.5rem;
   }
 }

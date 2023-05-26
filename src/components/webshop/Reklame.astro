@@ -1,0 +1,58 @@
+---
+import Button_2 from "../Button_2.astro";
+const { name, description, price, image1, slug, image } = Astro.props;
+---
+
+<div class="reklame">
+  <h3>PRODUKTER DU MÅSKE OGSÅ KAN LIDE?</h3>
+  <div class="container2">
+    <div class="product2">
+      <img src={image} alt="billede" />
+      <h5>Halskæde med vedhæng</h5>
+      <h5 class="price2">149 DKK</h5>
+    </div>
+
+    <div class="button1">
+      <Button_2 title="LÆG I KURV" />
+    </div>
+  </div>
+</div>
+
+<style>
+  .button1 {
+    margin-block: 40px;
+  }
+  .product2 {
+    padding-inline: 2rem;
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+    border-radius: 15px;
+  }
+  a {
+    text-decoration: none;
+  }
+
+  .container2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  img {
+    border-radius: 15px;
+    filter: brightness(1.1);
+  }
+
+  .price2 {
+    margin-top: 1rem;
+  }
+  h3 {
+    color: var(--brand-color-purple);
+    text-align: center;
+    margin-top: 4rem;
+    margin-bottom: 1rem;
+    margin-inline: 1rem;
+    font-weight: 400;
+  }
+</style>

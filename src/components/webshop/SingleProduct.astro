@@ -1,12 +1,15 @@
 ---
 import Button_2 from "../Button_2.astro";
-const { name, description, price, image1, slug } = Astro.props;
+import Reklame from "./Reklame.astro";
+const { name, description, price, image1, slug, image } = Astro.props;
 ---
 
 <h2>{name}</h2>
 <div class="container">
   <div class="product">
     <img src={image1} alt="billede" />
+  </div>
+  <div class="beskriv1">
     <h5>{description}</h5>
     <h5 class="price">{price}</h5>
   </div>
@@ -14,13 +17,23 @@ const { name, description, price, image1, slug } = Astro.props;
   <div class="button">
     <Button_2 title="LÆG I KURV" />
   </div>
+  <div class="beskriv">
+    <h6>Beskrivelse</h6><p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nostrum deserunt, modi aliquam sapiente beatae minus neque ex est voluptatum.</p>
+  </div>
 </div>
+<Reklame />
+
 <style>
-  .button {
+  .button,
+  .button1 {
     margin-block: 40px;
   }
-
-  .product {
+  .beskriv {
+    text-align: center;
+    margin-inline: 5rem;
+  }
+  .product,
+  .product2 {
     padding-inline: 2rem;
     padding-top: 2rem;
     padding-bottom: 1rem;
@@ -29,18 +42,65 @@ const { name, description, price, image1, slug } = Astro.props;
   a {
     text-decoration: none;
   }
-  .container {
+  .container,
+  .container2 {
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    margin-inline: 4rem;
   }
+
   img {
     border-radius: 15px;
     filter: brightness(1.1);
   }
-  .price {
+  .price,
+  .price2 {
     margin-top: 1rem;
+  }
+  h2 {
+    color: var(--brand-color-purple);
+    margin-top: 1.5rem;
+  }
+
+  h5 {
+    margin-top: 1rem;
+  }
+  h6 {
+    color: black;
+  }
+
+  @media (min-width: 800px) {
+    .container {
+      display: grid;
+      grid-template-columns: 0.5fr 1fr 1fr 0.5fr;
+      grid-template-rows: 0.2fr 0.1fr 0.1fr 0.1fr 0.1fr;
+      justify-content: start;
+      align-self: flex-start;
+      text-align: left;
+    }
+    .product {
+      grid-row: 2/5;
+      grid-column: 2/3;
+      margin-top: 4rem;
+    }
+    .button {
+      grid-row: 3/4;
+      grid-column: 3/4;
+      margin-left: 1rem;
+    }
+    .beskriv {
+      grid-row: 4/5;
+      grid-column: 3/4;
+      text-align: left;
+      margin-right: 6rem;
+      margin-inline: 1rem;
+    }
+    .beskriv1 {
+      grid-column: 3/4;
+      grid-row: 2/3;
+      margin-top: 1rem;
+      margin-left: 1rem;
+    }
   }
 </style>
