@@ -23,13 +23,7 @@ const { singleProduct } = Astro.props;
 ---
 
 <MainLayout>
-  <div class="product">
-    <img src={singleProduct.image1} alt="billede" />
-    <h4>{singleProduct.name}</h4>
-    <h5>{singleProduct.description}</h5>
-    <h5 class="price">{singleProduct.price}</h5>
-  </div>
-  <Button_2 title="LÆG I KURV" />
+  <ProductCard image1={`/img/${singleProduct.image1}`} name={singleProduct.name} description={singleProduct.description} price={singleProduct.price + " DKK"} slug={singleProduct.slug} />
 </MainLayout>
 
 <style>
