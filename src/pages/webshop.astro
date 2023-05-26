@@ -24,7 +24,7 @@ console.log(data);
     <div class="all_products">
       <h2>ALLE PRODUKTER</h2>
       <div class="products">
-        {data.map((product) => <Product_Card image1={`/img/${product.image1}`} name={product.name} description={product.description} price={product.price + " DKK"} />)}
+        {data.map((product) => <Product_Card image1={`/img/${product.image1}`} name={product.name} description={product.description} price={product.price + " DKK"} slug={product.slug} />)}
       </div>
     </div>
   </main>

@@ -1,11 +1,18 @@
+---
+import Navigation_1 from "../webshop/Navigation_1.astro";
+const url = "https://xajsthxggqgaudpivnrd.supabase.co/rest/v1/thrift_planet?limit=1";
+const options = {
+  headers: {
+    apikey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InhhanN0aHhnZ3FnYXVkcGl2bnJkIiwicm9sZSI6ImFub24iLCJpYXQiOjE2ODQ4NzE1MDgsImV4cCI6MjAwMDQ0NzUwOH0.HQ2wFMdKd1M2pYndgzr5dgo2DM4qSQgYHbFZwmQeb9k",
+  },
+};
+const response = await fetch(url, options);
+const data = await response.json();
+console.log(data);
+---
+
+{data.map((product) => <Navigation_1 category={product.category} />)}
+{data.map((product) => <Navigation_1 name={product.name} />)}
 <ul>
   <li><a href="/webshop">WEBSHOP</a></li>
-  <li>
-    <p>/</p>
-  </li>
-  <li><a href="#"></a></li>
-  <li>
-    <p>/</p>
-  </li>
-  <li><a href="#"></a></li>
 </ul>
