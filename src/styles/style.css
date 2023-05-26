@@ -50,6 +50,7 @@ h5 {
   font-family: "Alata", sans-serif;
   font-size: 1rem;
   color: var(--prod-text);
+  margin-top: 0.5rem;
 }
 a {
   font-family: "Alata", sans-serif;

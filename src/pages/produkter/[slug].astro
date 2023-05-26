@@ -17,24 +17,27 @@ export async function getStaticPaths() {
 }
 import Navigation from "../../components/webshop/Navigation.astro";
 import MainLayout from "../../layouts/MainLayout.astro";
-import Button_2 from "../../components/Button_2.astro";
 
 import SingleProduct from "../../components/webshop/SingleProduct.astro";
-import Menu from "../../components/Menu.astro";
+import MenuBackgr from "../../components/MenuBackgr.astro";
 const { singleProduct } = Astro.props;
 ---
 
 <MainLayout>
-  <Menu />
-  <Navigation category={singleProduct.category} name={singleProduct.name} />
-  <SingleProduct image1={`/img/${singleProduct.image1}`} name={singleProduct.name} description={singleProduct.description} price={singleProduct.price + " DKK"} slug={singleProduct.slug} />
+  <MenuBackgr />
+  <div class="indhold">
+    <Navigation category={singleProduct.category} name={singleProduct.name} />
+    <SingleProduct image1={`/img/${singleProduct.image1}`} name={singleProduct.name} description={singleProduct.description} price={singleProduct.price + " DKK"} slug={singleProduct.slug} />
+  </div>
 </MainLayout>
 
 <style>
   .button {
     margin-block: 40px;
   }
-
+  .bg_menu {
+    background-image: url("../img/general/gradient_background_menu.png");
+  }
   .product {
     padding-inline: 2rem;
     padding-top: 2rem;
@@ -53,5 +56,10 @@ const { singleProduct } = Astro.props;
   }
   .price {
     margin-top: 1rem;
+  }
+  @media (max-width: 800px) {
+    .indhold {
+      margin-top: 2rem;
+    }
   }
 </style>
