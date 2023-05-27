@@ -4,6 +4,7 @@ import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import Info_card from "../components/kontakt/Info_card.astro";
 import Adresse from "../components/kontakt/Adresse.astro";
+import Question from "../components/kontakt/Question.astro";
 ---
 
 <MainLayout title="KONTAKT">
@@ -14,6 +15,9 @@ import Adresse from "../components/kontakt/Adresse.astro";
   <main>
     <Adresse title="BESØG OS NEDE I BUTIKKEN" image2="/img/general/bannerdown.png" />
     <Info_card />
+    <Question>
+      <img class="blur" src="img/general/gradient_background.svg" alt="background" />
+    </Question>
     <Footer />
   </main>
 </MainLayout>
@@ -32,5 +36,25 @@ import Adresse from "../components/kontakt/Adresse.astro";
   p {
     font-size: 51pt;
     color: white;
+  }
+
+  .desktop {
+    display: none;
+  }
+
+  .mobil {
+    display: block;
+  }
+
+  image2 {
+    margin: 60px;
+  }
+  @media (min-width: 800px) {
+    .desktop {
+      display: block;
+    }
+    .mobil {
+      display: none;
+    }
   }
 </style>
