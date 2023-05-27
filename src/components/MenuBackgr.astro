@@ -12,7 +12,7 @@
       <li class="logo-drop">
         <li><a href="/kontakt">KONTAKT & FAQ</a></li>
         <li class="logo_li">
-          <a href="/"><img class="logo" src="/img/general/Logo_smiley.svg" alt="logo" /></a>
+          <a class="logo_a" href="/"><img class="logo" src="/img/general/Logo_smiley.svg" alt="logo" /></a>
         </li>
         <li><a href="/webshop">WEBSHOP</a></li>
         <li><a href="/#">KURV</a></li>
@@ -23,10 +23,6 @@
 <script src="../scripts/menu.js"></script>
 
 <style>
-  .grid_1-1 {
-    display: grid;
-    grid-template-columns: auto 1fr;
-  }
   a {
     white-space: nowrap;
   }
@@ -70,9 +66,9 @@
     border-radius: 45px;
     padding: 4px 20px;
   }
-  #menu .logo:hover {
-    border: none;
-    padding: 0;
+  #menu .logo_a:hover {
+    border: transparent;
+    padding: 4px 24px;
     filter: brightness(1.2);
   }
 

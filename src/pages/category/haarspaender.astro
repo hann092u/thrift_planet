@@ -15,7 +15,26 @@ console.log(data);
 
 <MainLayout>
   <MenuBackgr />
-  <div class="products">
-    {data.map((product) => <ProductCardCategory image1={`/img/${product.image1}`} name={product.name} description={product.description} price={product.price + " DKK"} slug={product.slug} />)}
+  <div class="all_products">
+    <h2>RINGE</h2>
+    <div class="products">
+      {data.map((product) => <ProductCardCategory image1={`/img/${product.image1}`} name={product.name} description={product.description} price={product.price + " DKK"} slug={product.slug} />)}
+    </div>
   </div>
 </MainLayout>
+
+<style>
+  h2 {
+    padding: 2rem;
+    color: var(--brand-color-purple);
+  }
+  @media (min-width: 800px) {
+    .all_products {
+      margin-inline: 4rem;
+    }
+    .products {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
+</style>

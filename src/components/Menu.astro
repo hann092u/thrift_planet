@@ -8,14 +8,12 @@
 <nav id="menu">
   <ul>
     <li><a href="/omos">OM OS</a></li>
-    <li class="logo-drop">
-      <li><a href="/kontakt">KONTAKT & FAQ</a></li>
-      <li class="logo_li">
-        <a href="/"><img class="logo" src="/img/general/Logo_smiley.svg" alt="logo" /></a>
-      </li>
-      <li><a href="/webshop">WEBSHOP</a></li>
-      <li><a href="/#">KURV</a></li>
+    <li><a href="/kontakt">KONTAKT & FAQ</a></li>
+    <li class="logo_li">
+      <a class="logo_a" href="/"><img class="logo" src="/img/general/Logo_smiley.svg" alt="logo" /></a>
     </li>
+    <li><a href="/webshop">WEBSHOP</a></li>
+    <li><a href="/#">KURV</a></li>
   </ul>
 </nav>
 
@@ -62,9 +60,9 @@
     border-radius: 45px;
     padding: 4px 20px;
   }
-  #menu .logo:hover {
-    border: none;
-    padding: 0;
+  #menu .logo_a:hover {
+    border: transparent;
+    padding: 4px 24px;
     filter: brightness(1.2);
   }
 
@@ -83,7 +81,7 @@
     z-index: 2;
   }
   .logo_li {
-    width: 50px;
+    width: 70px;
   }
   /* Rest of the CSS */
 
@@ -96,9 +94,7 @@
       border-radius: 45px;
       padding: 4px 10px;
     }
-    img {
-      width: 100%;
-    }
+
     .logo_li {
       width: 50px;
     }
@@ -109,6 +105,11 @@
       border-radius: 45px;
       padding: 4px 10px;
       text-align: center;
+    }
+    #menu .logo_a:hover {
+      border: none;
+      padding: 4px 14px;
+      filter: brightness(1.2);
     }
   }
   @media screen and (max-width: 800px) {
@@ -121,9 +122,9 @@
       margin: 1rem;
       padding: 5px;
     }
-
-    .logo-drop {
-      display: none;
+    #menu .logo_a:hover {
+      border: transparent;
+      filter: brightness(1.2);
     }
     #burger-menu {
       display: block;
@@ -216,11 +217,6 @@
       font-size: 20px;
       margin-bottom: 30px;
       text-decoration: none;
-    }
-    .ticket a {
-      padding: 15px 25px 15px 25px;
-      margin: 10px;
-      border-radius: 30px;
     }
   }
 </style>
