@@ -33,4 +33,24 @@ import Adresse from "../components/kontakt/Adresse.astro";
     font-size: 51pt;
     color: white;
   }
+
+  .desktop {
+    display: none;
+  }
+
+  .mobil {
+    display: block;
+  }
+
+  image2 {
+    margin: 60px;
+  }
+  @media (min-width: 800px) {
+    .desktop {
+      display: block;
+    }
+    .mobil {
+      display: none;
+    }
+  }
 </style>
