@@ -1,0 +1,27 @@
+<div class="grid_11">
+  <div class="baggrund"><slot /></div>
+  <div class="question"><img src="/kontakt/skriv_til_os.svg" alt="question" /></div>
+</div>
+
+<style>
+  .grid_11 {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-row: 1fr;
+  }
+  .baggrund {
+    width: 100%;
+    height: 80%;
+    grid-column: 1;
+    grid-row: 1/3;
+    z-index: 1;
+    overflow: hidden;
+  }
+  .question {
+    grid-column: 1;
+    grid-row: 1;
+    margin-left: 20px;
+    margin-top: 20px;
+    z-index: 1;
+  }
+</style>
