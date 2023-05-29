@@ -1,5 +1,6 @@
 ---
 import MainLayout from "../../layouts/MainLayout.astro";
+import Banner from "../../components/webshop/Banner.astro";
 import ProductCardCategory from "../../components/webshop/ProductCardCategory.astro";
 import MenuBackgr from "../../components/MenuBackgr.astro";
 const url = "https://xajsthxggqgaudpivnrd.supabase.co/rest/v1/thrift_planet?category=eq.halskaeder";
@@ -14,6 +15,7 @@ console.log(data);
 ---
 
 <MainLayout>
+  <Banner />
   <MenuBackgr />
   <div class="all_products">
     <h2>RINGE</h2>

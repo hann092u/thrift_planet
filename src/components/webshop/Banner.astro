@@ -1,0 +1,45 @@
+---
+---
+
+<div class="banner">
+  <h6 class="banner-text">HUSK AT VI IKKE SENDER VARER KØBT I SHOPPEN! VI PAKKER DINE VARER SÅ DE ER KLAR OG DU KAN AFHENTE I HELE BUTIKKENS ÅBNINGSTID.</h6>
+</div>
+
+<style>
+  .banner {
+    background-color: white;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Styles for the text */
+  .banner-text {
+    font-size: 1rem;
+    color: black;
+    text-align: center;
+  }
+
+  h6 {
+    font-size: 0.8rem;
+    margin-top: 0;
+  }
+
+  @keyframes roll-right {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(100%);
+    }
+  }
+  @media screen and (max-width: 800px) {
+    .banner {
+      height: auto;
+    }
+    .banner-text {
+      font-size: 0.7rem;
+    }
+  }
+</style>
