@@ -8,8 +8,8 @@ import Button from "../Button.astro";
 </div>
 <div class="container">
   <h2>{title}</h2>
-  <div>
-    <img class="video" src="/header/purple_header_banner.png" alt="" />
+  <div class="layout">
+    <video autoplay muted loop src="/img/general/thrift_planet_video.mp4"></video>
   </div>
   <div class="vis">
     <Button title="LÆS MERE" />
@@ -60,6 +60,15 @@ import Button from "../Button.astro";
       margin-inline: -1rem;
       margin-top: -55px;
       transform: translateX(-5%);
+    }
+
+    .layout {
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .vis {
+      z-index: 5;
     }
   }
 </style>
