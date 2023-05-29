@@ -3,9 +3,6 @@ const { title, image1, image2 } = Astro.props;
 import Button from "../Button.astro";
 ---
 
-<div>
-  <img class="sky_up" src={image1} alt="" />
-</div>
 <div class="container">
   <h2>{title}</h2>
   <div class="layout">
@@ -47,13 +44,6 @@ import Button from "../Button.astro";
       background-color: var(--bg);
       margin-top: -60px;
     }
-    .sky_up {
-      width: 116%;
-      margin-inline: -1rem;
-      margin-top: -129px;
-      transform: translateX(-5%);
-      overflow: hidden;
-    }
 
     .sky_down {
       width: 116%;
@@ -65,6 +55,7 @@ import Button from "../Button.astro";
     .layout {
       height: 100vh;
       overflow: hidden;
+      fill-opacity: 2px;
     }
 
     .vis {
