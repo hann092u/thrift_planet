@@ -16,61 +16,57 @@ import Menu from "../components/Menu.astro";
   </div>
   <div class="lottie">
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-    <lottie-player src="/img/general/arrow.json" background="transparent" speed="1" style="width: 500px; height: 500px;" loop autoplay></lottie-player>
+    <lottie-player class="sizelottie" src="/img/general/arrow.json" background="transparent" speed="1" style="width: ; height: 200px;" loop autoplay></lottie-player>
   </div>
 </header>
 
 <style>
   .baggrund {
     grid-row: 1/5;
-    grid-column: 1/4;
+    grid-column: 1/6;
   }
 
   header {
     display: grid;
-    grid-template-columns: 1fr 1fr 0.5fr;
-    grid-template-rows: 1fr 1fr 2fr 1fr;
+    grid-template-columns: 0.5fr 1fr 0.5fr 1fr 0.5fr;
+    grid-template-rows: 0.5fr 0.7fr 1fr 1fr;
     background-color: var(--bg);
   }
 
   .menu {
     grid-row: 1;
-    grid-column: 3;
+    grid-column: 5;
     z-index: 5;
   }
 
   .container_text {
     grid-row: 3;
-    grid-column: 1/4;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    grid-column: 1/6;
   }
   .container_animation {
     grid-row: 2;
-    grid-column: 2;
+    grid-column: 4/5;
     display: flex;
     flex-direction: column;
     justify-content: center;
   }
-  .container_text {
-    width: 100%;
-  }
-  .size {
+
+  img {
     width: 100%;
   }
 
-  .animation_container {
-    width: 100%;
+  .lottie {
+    grid-column: 3;
+    grid-row: 4;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    margin-top: 20px;
   }
 
   .animation_size {
     width: 100%;
     animation: cirkelAnimation 10s infinite;
-  }
-
-  .lottie {
-    width: 40%;
   }
 
   @keyframes cirkelAnimation {
@@ -111,7 +107,7 @@ import Menu from "../components/Menu.astro";
       grid-column: 2/3;
     }
     .container_animation {
-      grid-row: 2/3;
+      grid-row: 2;
       grid-column: 3/4;
     }
     .container_text {
