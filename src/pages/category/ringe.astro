@@ -1,8 +1,9 @@
 ---
 import MainLayout from "../../layouts/MainLayout.astro";
+import Banner from "../../components/webshop/Banner.astro";
 import ProductCardCategory from "../../components/webshop/ProductCardCategory.astro";
 import MenuBackgr from "../../components/MenuBackgr.astro";
-const url = "https://xajsthxggqgaudpivnrd.supabase.co/rest/v1/thrift_planet?category=eq.ringe";
+const url = "https://xajsthxggqgaudpivnrd.supabase.co/rest/v1/thrift_planet?category=eq.halskaeder";
 const options = {
   headers: {
     apikey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InhhanN0aHhnZ3FnYXVkcGl2bnJkIiwicm9sZSI6ImFub24iLCJpYXQiOjE2ODQ4NzE1MDgsImV4cCI6MjAwMDQ0NzUwOH0.HQ2wFMdKd1M2pYndgzr5dgo2DM4qSQgYHbFZwmQeb9k",
@@ -14,6 +15,7 @@ console.log(data);
 ---
 
 <MainLayout>
+  <Banner />
   <MenuBackgr />
   <div class="all_products">
     <h2>RINGE</h2>
