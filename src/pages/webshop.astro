@@ -3,6 +3,7 @@ import MainLayout from "../layouts/MainLayout.astro";
 import Categories from "../components/webshop/Categories.astro";
 import Product_Card from "../components/webshop/Product_Card.astro";
 import Header from "../components/Header.astro";
+import Banner from "../components/webshop/Banner.astro";
 const url = "https://xajsthxggqgaudpivnrd.supabase.co/rest/v1/thrift_planet";
 const options = {
   headers: {
@@ -15,6 +16,7 @@ console.log(data);
 ---
 
 <MainLayout title="Webshop">
+  <Banner />
   <Header title="WEBSHOP" animation="/img/general/animation.svg">
     <img class="desktop" src="./img/general/header_webshop.webp" alt="baggrund" />
     <img class="mobil" src="/img/general/bg_mobil.png" alt="baggrund" />
@@ -56,7 +58,7 @@ console.log(data);
     .products {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
-      margin-inline: 3rem;
+      margin-inline: 4rem;
     }
   }
 </style>

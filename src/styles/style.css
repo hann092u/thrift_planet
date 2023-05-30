@@ -17,6 +17,8 @@ img {
 }
 body {
   background-color: var(--bg-pink);
+  max-width: 1800px;
+  margin: 0 auto;
 }
 main {
   overflow: hidden;
