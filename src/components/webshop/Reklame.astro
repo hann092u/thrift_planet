@@ -1,13 +1,13 @@
 ---
 import Button_2 from "../Button_2.astro";
-const { name, description, price, image1, slug, image } = Astro.props;
+const { image, title } = Astro.props;
 ---
 
 <div class="reklame">
   <div class="container2">
     <div class="product2">
       <img src={image} alt="billede" />
-      <h5>Halskæde med vedhæng</h5>
+      <h5>{title}</h5>
       <h5 class="price2">149 DKK</h5>
     </div>
 
@@ -60,5 +60,10 @@ const { name, description, price, image1, slug, image } = Astro.props;
   }
   h5 {
     font-size: 0.9rem;
+  }
+  @media (min-width: 800px) {
+    img {
+      width: 70%;
+    }
   }
 </style>
