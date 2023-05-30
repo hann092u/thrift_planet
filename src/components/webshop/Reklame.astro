@@ -4,7 +4,6 @@ const { name, description, price, image1, slug, image } = Astro.props;
 ---
 
 <div class="reklame">
-  <h3>PRODUKTER DU MÅSKE OGSÅ KAN LIDE?</h3>
   <div class="container2">
     <div class="product2">
       <img src={image} alt="billede" />
@@ -39,6 +38,10 @@ const { name, description, price, image1, slug, image } = Astro.props;
     text-align: center;
   }
 
+  h2 {
+    color: var(--brand-color-purple);
+    margin-top: 1.5rem;
+  }
   img {
     border-radius: 15px;
     filter: brightness(1.1);
@@ -54,5 +57,8 @@ const { name, description, price, image1, slug, image } = Astro.props;
     margin-bottom: 1rem;
     margin-inline: 1rem;
     font-weight: 400;
+  }
+  h5 {
+    font-size: 0.9rem;
   }
 </style>
