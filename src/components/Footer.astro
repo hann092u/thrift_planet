@@ -9,13 +9,23 @@ const { image3 } = Astro.props;
     <li>MAN-LØR 12-18</li>
     <li>KONTAKT & FAQ</li>
     <li>
-      <img class="footer_icons" src="/img/general/thrift_footericons.png" alt="footer_icons" />
+      <div class="iconer">
+        <img class="footer_icons" src="/img/general/icon_tiktok.svg" alt="footer_icons" />
+        <img class="footer_icons" src="/img/general/icon_insta.svg" alt="footer_icons" />
+        <img class="footer_icons" src="/img/general/icon_fb.svg" alt="footer_icons" />
+      </div>
     </li>
     <li class="copyright">© THRIFT PLANET</li>
   </ul>
 </article>
 
 <style>
+  .iconer {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    padding-inline: 7rem;
+  }
   .box {
     display: block;
     background-color: #dac5f2;
@@ -39,8 +49,8 @@ const { image3 } = Astro.props;
   }
 
   .footer_icons {
-    width: 10%;
-    min-width: 150px;
+    border-radius: 50%;
+    border: 3px solid white;
   }
 
   .sky_up {
@@ -53,9 +63,10 @@ const { image3 } = Astro.props;
   @media (min-width: 800px) {
     .footer_icons {
       width: 10%;
-      min-width: 350px;
     }
-
+    .footer_icons:hover {
+      border: 3px solid var(--brand-color-purple);
+    }
     li {
       list-style: none;
       color: white;
@@ -80,6 +91,10 @@ const { image3 } = Astro.props;
       margin-inline: -1rem;
       margin-bottom: -55px;
       transform: translateX(-5%);
+    }
+    .iconer {
+      padding-inline: 11rem;
+      margin-inline: 5rem;
     }
   }
 </style>
