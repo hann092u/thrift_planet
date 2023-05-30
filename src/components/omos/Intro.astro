@@ -5,7 +5,9 @@ const { title, image1, image2 } = Astro.props;
 <div class="grid_1">
   <div class="tekst_planet">
     <h2>{title}</h2>
-    <p>Thrift planet er en moderne vintageshop. Vi sælger håndplukket secondhand og vintagetøj fra berlin & italien og et udvalg af nye accessories såsom smykker og hårklemmer.</p>
+    <p>I butikken Thrift Planet sælger vi secondhand og vintage tøj fra Berlin & Italien, som vi har udvalgt helt specielt til jer. Alt tøjet er udvalgt af os efter trends, farver, kvalitet og selvfølgelig også bare efter over all niceness. Vi har en forkærlighed for 90’er og 00’er mode, og så elsker vi second hand basic styles i god kvalitet.</p>
+    <h4>NEWS EVERY WEEK!</h4>
+    <p>Du kan finde nye styles på stativerne hver uge!</p>
   </div>
   <div class="planet">
     <img src="/omos/velkommen_planet-2.webp" alt="velkommen" />
@@ -28,13 +30,15 @@ const { title, image1, image2 } = Astro.props;
 
   h2 {
     color: white;
+    margin-bottom: 2rem;
   }
-
+  h4 {
+    text-align: center;
+    color: var(--brand-color-purple);
+    margin-top: 2rem;
+  }
   p {
     text-align: center;
-  }
-
-  .tekst_indhold {
   }
 
   @media (min-width: 800px) {
@@ -48,7 +52,9 @@ const { title, image1, image2 } = Astro.props;
     .tekst_planet {
       grid-column: 2;
       grid-row: 2;
-      margin-top: 40px;
+      margin-top: 3rem;
+      margin-inline: 3rem;
+      padding-right: 2rem;
     }
 
     .planet {

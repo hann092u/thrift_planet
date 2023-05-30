@@ -7,13 +7,13 @@ import Indehaver_card from "./Indehaver_card.astro";
     <Indehaver_card image="/omos/mette.webp" title="METTE" />
   </div>
   <div class="tekst1">
-    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quisquam minus asperiores, atque fugiat doloremque possimus quia nam deserunt est totam modi laudantium ad enim consequuntur similique iure pariatur. Illo, at? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea illum assumenda totam officia quis, deleniti perferendis amet harum in accusamus necessitatibus expedita asperiores ipsa, aliquid esse? Dignissimos eveniet aliquam perferendis.</p>
+    <p>Vi bestræber os på at have mange forskellige størrelser i butikken, men da alt er vintage og secondhand kan det selvfølgelig variere. Størrelserne strækker sig fra 34 – 42. Vi har også et mindre udvalg af str. 44 – 50. Fik vi nævnt, at der kommer nye varer ud i butikken hver eneste uge?</p>
   </div>
   <div class="ann_sofie">
     <Indehaver_card image="/omos/Ann_Sofie.webp" title="ANN-SOFIE" />
   </div>
   <div class="tekst2">
-    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Commodi reprehenderit ullam exercitationem adipisci eveniet corporis illo odit, iusto eligendi quae nobis nemo praesentium unde temporibus rem quidem nostrum porro quasi. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eligendi eos quisquam nostrum ad cum, fuga sequi ab ex veritatis, ratione repellendus assumenda! Voluptate et culpa at, ipsam sit modi esse!</p>
+    <p>Ud over tøj kan du finde et ret skønt udvalg af nye accessories i butikken. Vi snakker hårspænder i alle farver og størrelser samt fine smykker. Vi har også vores egen lille smykkekollektion, som består af smykker med glasperler formet som frugt, grønt og blomster. Vi udskifter løbende vores udvalg, men du kan se et uddrag under fanen “universet”. Vi ses i Studiestræde 24 !!!</p>
   </div>
 </div>
 
@@ -21,7 +21,7 @@ import Indehaver_card from "./Indehaver_card.astro";
   .grid_1_3_1 {
     display: grid;
     grid-template-columns: 1fr 3fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
+    gap: 10px;
   }
 
   .mette {
@@ -33,6 +33,7 @@ import Indehaver_card from "./Indehaver_card.astro";
   .tekst1 {
     grid-column: 2;
     grid-row: 2;
+    margin-bottom: 2rem;
   }
 
   .ann_sofie {
@@ -44,6 +45,7 @@ import Indehaver_card from "./Indehaver_card.astro";
   .tekst2 {
     grid-column: 2;
     grid-row: 4;
+    margin-bottom: 2rem;
   }
 
   @media (min-width: 800px) {
@@ -64,6 +66,7 @@ import Indehaver_card from "./Indehaver_card.astro";
       grid-row: 1;
       margin-top: 250px;
       margin-left: 50px;
+      margin-right: 4rem;
     }
 
     .ann_sofie {
@@ -76,6 +79,7 @@ import Indehaver_card from "./Indehaver_card.astro";
       grid-row: 2;
       margin-top: 150px;
       margin-right: 100px;
+      margin-left: 4rem;
     }
   }
 </style>
