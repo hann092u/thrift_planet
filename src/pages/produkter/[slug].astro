@@ -21,6 +21,7 @@ import Banner from "../../components/webshop/Banner.astro";
 import SingleProduct from "../../components/webshop/SingleProduct.astro";
 import MenuBackgr from "../../components/MenuBackgr.astro";
 import Footer from "../../components/Footer.astro";
+import Reklame from "../../components/webshop/Reklame.astro";
 const { singleProduct } = Astro.props;
 ---
 
@@ -31,7 +32,7 @@ const { singleProduct } = Astro.props;
     <Navigation category={singleProduct.category} name={singleProduct.name} />
     <SingleProduct image1={`/img/${singleProduct.image1}`} name={singleProduct.name} description={singleProduct.description} price={singleProduct.price + " DKK"} slug={singleProduct.slug} image="../img/blå_hjerte_forside" />
   </div>
-  <Footer image3="img/general/bannerup.svg" />
+  <Footer image3="../img/general/bannerup.svg" />
 </MainLayout>
 
 <style>
