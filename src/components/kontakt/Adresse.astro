@@ -2,19 +2,18 @@
 const { title, image2 } = Astro.props;
 ---
 
-<div class="overskrift">
-  <h2>{title}</h2>
-</div>
-
 <div class="grid_1">
   <div class="adresse">
-    <p>
+    <h2>{title}</h2>
+    <h5>
       STUDIESTRÆDE 24, KL. TH <br />
       1455 KØBENHAVN K <br />
+    </h5>
+    <h5>
       MAN - FRE 12-18 <br />
       LØR 12-17 <br />
       THRIFTPLANET@HOTMAIL.COM
-    </p>
+    </h5>
   </div>
 
   <div class="skilt">
@@ -26,35 +25,20 @@ const { title, image2 } = Astro.props;
 
 <style>
   .grid_1 {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr;
     background-color: var(--bg);
+    padding: 3rem;
   }
 
   h2 {
     color: white;
     background-color: var(--bg);
     margin-top: 0;
-    padding-bottom: 80px;
+    margin-bottom: 2rem;
   }
 
-  p {
+  h5 {
     text-align: center;
-  }
-
-  .adresse {
-    grid-column: 2;
-    grid-row: 1;
-  }
-
-  .skilt {
-    grid-column: 1;
-    grid-row: 1;
-  }
-
-  img {
-    width: 100%;
+    margin-bottom: 2rem;
   }
 
   @media (min-width: 800px) {
@@ -68,16 +52,19 @@ const { title, image2 } = Astro.props;
     .adresse {
       grid-column: 2;
       grid-row: 1/2;
-      margin-top: 40px;
+      margin-top: 3rem;
+      margin-right: 8rem;
     }
 
     .skilt {
       grid-column: 1;
       grid-row: 1/2;
+      width: 70%;
+      margin-left: 8rem;
     }
 
-    p {
-      margin-top: 20px;
+    h5 {
+      margin-top: 3rem;
     }
   }
 </style>

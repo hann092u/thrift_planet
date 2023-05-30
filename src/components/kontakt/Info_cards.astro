@@ -21,13 +21,10 @@ const { title, image, link } = Astro.props;
   a {
     text-decoration: none;
   }
+
   h2 {
     text-align: center;
     font-size: 1rem;
-    color: white;
-  }
-
-  span {
   }
 
   img {
@@ -35,10 +32,24 @@ const { title, image, link } = Astro.props;
   }
   .tekst1 {
     color: white;
-    transform: translate(0, -400%);
+    transform: translate(0, -380%);
     cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+  @media (min-width: 800px) {
+    h2 {
+      font-size: 2.2rem;
+    }
+    .tekst1 {
+      transform: translate(0, -310%);
+    }
+    a:hover img {
+      filter: brightness(1.2);
+    }
+    .kontakt1 {
+      max-width: 400px;
+    }
   }
 </style>

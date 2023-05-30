@@ -66,6 +66,9 @@ a {
 p {
   font-family: "Dosis", sans-serif;
 }
+.footer {
+  overflow: hidden;
+}
 @media (min-width: 800px) {
   h2 {
     font-size: 2.6rem;
@@ -79,5 +82,8 @@ p {
   }
   p {
     font-size: 22px;
+  }
+  .footer {
+    overflow: hidden;
   }
 }

@@ -29,6 +29,7 @@ const { name, description, price, image1, image2, slug, image } = Astro.props;
 <h3>PRODUKTER DU MÅSKE OGSÅ KAN LIDE?</h3>
 <div class="reklame">
   <Reklame image="../img/gul_ring_forside.webp" title="Gul ring med sten" />
+  <Reklame image="../img/hjerte_forside.webp" title="Chocker med hjerte vedhæng" />
   <Reklame image="../img/klemme_lilla2_forside.webp" title="Stor lilla hårklemmer" />
 </div>
 <script>
@@ -74,11 +75,16 @@ const { name, description, price, image1, image2, slug, image } = Astro.props;
   .product img.aktiv {
     display: inline;
   }
-
+  h2 {
+    color: var(--brand-color-purple);
+    margin-top: 2rem;
+  }
   h3 {
     color: var(--brand-color-purple);
     margin-top: 5rem;
-    margin-bottom: ;
+    margin-bottom: 3rem;
+    text-align: center;
+    padding-inline: 2rem;
   }
   .button,
   .button1 {
@@ -155,7 +161,9 @@ const { name, description, price, image1, image2, slug, image } = Astro.props;
     }
     .reklame {
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+      margin-inline: 6rem;
+      gap: 30px;
     }
   }
 </style>
