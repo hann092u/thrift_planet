@@ -3,6 +3,7 @@ import MainLayout from "../../layouts/MainLayout.astro";
 import Banner from "../../components/webshop/Banner.astro";
 import ProductCardCategory from "../../components/webshop/ProductCardCategory.astro";
 import MenuBackgr from "../../components/MenuBackgr.astro";
+import Footer from "../../components/Footer.astro";
 const url = "https://xajsthxggqgaudpivnrd.supabase.co/rest/v1/thrift_planet?category=eq.halskaeder";
 const options = {
   headers: {
@@ -23,6 +24,7 @@ console.log(data);
       {data.map((product) => <ProductCardCategory image1={`/img/${product.image1}`} name={product.name} description={product.description} price={product.price + " DKK"} slug={product.slug} />)}
     </div>
   </div>
+  <Footer image3="img/general/bannerup.svg" />
 </MainLayout>
 
 <style>

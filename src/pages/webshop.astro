@@ -4,6 +4,7 @@ import Categories from "../components/webshop/Categories.astro";
 import Product_Card from "../components/webshop/Product_Card.astro";
 import Header from "../components/Header.astro";
 import Banner from "../components/webshop/Banner.astro";
+import Footer from "../components/Footer.astro";
 const url = "https://xajsthxggqgaudpivnrd.supabase.co/rest/v1/thrift_planet";
 const options = {
   headers: {
@@ -19,7 +20,7 @@ console.log(data);
   <Banner />
   <Header title="WEBSHOP" animation="/img/general/animation.svg">
     <img class="desktop" src="./img/general/header_webshop.webp" alt="baggrund" />
-    <img class="mobil" src="/img/general/bg_mobil.svg" alt="baggrund" />
+    <img class="mobil" src="/img/general/baggrund_mobil_shop.webp" alt="baggrund" />
   </Header>
   <main>
     <Categories title="KATEGORIER" />
@@ -29,6 +30,7 @@ console.log(data);
         {data.map((product) => <Product_Card image1={`/img/${product.image1}`} name={product.name} description={product.description} price={product.price + " DKK"} slug={product.slug} />)}
       </div>
     </div>
+    <Footer image3="img/general/bannerup.svg" />
   </main>
 </MainLayout>
 
@@ -46,6 +48,7 @@ console.log(data);
 
   .mobil {
     display: block;
+    height: 100vh;
   }
 
   @media (min-width: 800px) {
