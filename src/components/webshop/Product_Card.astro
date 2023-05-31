@@ -4,7 +4,7 @@ const { name, description, price, image1, slug } = Astro.props;
 ---
 
 <div class="container">
-  <a href={`/produkter/${slug}`}>
+  <a href={`../produkter/${slug}`}>
     <div class="product">
       <img src={image1} alt="billede" />
       <h4>{name}</h4>
