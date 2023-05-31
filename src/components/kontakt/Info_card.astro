@@ -2,7 +2,7 @@
 import Info_cards from "../kontakt/Info_cards.astro";
 ---
 
-<div class="overskrift"><h2>INFORMATION</h2></div>
+<h2>INFORMATION</h2>
 <div class="grid_1_1">
   <div class="kontakt1"><Info_cards title="FORSENDELSE" image="/kontakt/kontakt333.webp" /></div>
   <div class="kontakt2"><Info_cards title="RETURPOLITIK" image="/kontakt/kontakt222.webp" /></div>
@@ -15,6 +15,9 @@ import Info_cards from "../kontakt/Info_cards.astro";
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     color: white;
+    margin-right: 3rem;
+    margin-left: 3.8rem;
+    gap: 10px;
   }
 
   .kontakt1 {
@@ -32,12 +35,22 @@ import Info_cards from "../kontakt/Info_cards.astro";
     grid-column: 1;
     grid-row: 2;
   }
+  h2 {
+    color: var(--brand-color-purple);
+    margin-block: 1rem;
+  }
   .kontakt4 {
     grid-column: 2;
     grid-row: 2;
   }
 
-  img {
-    width: 100%;
+  @media (min-width: 800px) {
+    .grid_1_1 {
+      margin-right: 14rem;
+      margin-left: 16rem;
+    }
+    h2 {
+      margin: 3rem;
+    }
   }
 </style>

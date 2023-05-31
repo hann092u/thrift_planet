@@ -15,11 +15,11 @@ import Tidslinje from "../components/omos/Tidslinje.astro";
   <main>
     <Intro title="VORES LILLE PLANET" image2="/img/general/bannerdown.svg" />
     <Ejer_component />
-    <Tidslinje>
-      <img class="blur" src="img/general/gradient_background.svg" alt="background" />
-    </Tidslinje>
-    <Footer image3="img/general/bannerup.svg" />
+    <Tidslinje />
   </main>
+  <div class="footer">
+    <Footer image3="img/general/bannerup.svg" />
+  </div>
 </MainLayout>
 
 <style>
@@ -39,20 +39,21 @@ import Tidslinje from "../components/omos/Tidslinje.astro";
     display: block;
   }
 
-  image2 {
-    margin: 60px;
-  }
-
   .blur {
     filter: blur(5px);
   }
-
+  .footer {
+    margin-top: -6rem;
+  }
   @media (min-width: 800px) {
     .desktop {
       display: block;
     }
     .mobil {
       display: none;
+    }
+    .footer {
+      margin-top: -9rem;
     }
   }
 </style>

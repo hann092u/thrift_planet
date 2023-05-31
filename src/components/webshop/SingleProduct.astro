@@ -1,13 +1,18 @@
 ---
 import Button_2 from "../Button_2.astro";
 import Reklame from "./Reklame.astro";
-const { name, description, price, image1, slug, image } = Astro.props;
+const { name, description, price, image1, image2, slug, image } = Astro.props;
 ---
 
 <h2>{name}</h2>
 <div class="container">
   <div class="product">
-    <img src={image1} alt="billede" />
+    <img id="img_alene" class="aktiv" src={image1} alt="billede" />
+    <img id="img_model" src={image2} alt="billede" />
+    <div class="buttons">
+      <button id="alene" class="aktiv"></button>
+      <button id="model" class=""></button>
+    </div>
   </div>
   <div class="beskriv1">
     <h5>{description}</h5>
@@ -22,10 +27,65 @@ const { name, description, price, image1, slug, image } = Astro.props;
   </div>
 </div>
 <h3>PRODUKTER DU MÅSKE OGSÅ KAN LIDE?</h3>
-<Reklame />
-<Reklame />
+<div class="reklame">
+  <Reklame image="../img/gul_ring_forside.webp" title="Gul ring med sten" />
+  <Reklame image="../img/hjerte_forside.webp" title="Chocker med hjerte vedhæng" />
+  <Reklame image="../img/klemme_lilla2_forside.webp" title="Stor lilla hårklemmer" />
+</div>
+<script>
+  document.querySelector("#model").addEventListener("click", skiftBillede);
+  document.querySelector("#alene").addEventListener("click", skiftBillede);
 
+  function skiftBillede() {
+    console.log("skiftBillede");
+    // billeder
+    document.querySelector("#img_model").classList.toggle("aktiv");
+    document.querySelector("#img_alene").classList.toggle("aktiv");
+    // knapper
+    document.querySelector("#model").classList.toggle("aktiv");
+    document.querySelector("#alene").classList.toggle("aktiv");
+  }
+
+  // function skiftBillede2() {
+  //   console.log("skiftBillede");
+  //   document.querySelector("#img_model").classList.remove("aktiv");
+  //   document.querySelector("#img_alene").classList.add("aktiv");
+  // }
+</script>
 <style>
+  button {
+    background-color: var(--bg);
+    padding: 9px;
+    border-radius: 50%;
+    border: none;
+  }
+  .buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 1rem;
+  }
+  button.aktiv {
+    background-color: var(--brand-color-purple);
+  }
+  .product img {
+    display: none;
+  }
+  .product img.aktiv {
+    display: inline;
+  }
+  h2 {
+    color: var(--brand-color-purple);
+    margin-top: 2rem;
+  }
+  h3 {
+    color: var(--brand-color-purple);
+    margin-top: 5rem;
+    margin-bottom: 3rem;
+    text-align: center;
+    padding-inline: 2rem;
+  }
   .button,
   .button1 {
     margin-block: 40px;
@@ -34,8 +94,7 @@ const { name, description, price, image1, slug, image } = Astro.props;
     text-align: center;
     margin-inline: 5rem;
   }
-  .product,
-  .product2 {
+  .product {
     padding-inline: 2rem;
     padding-top: 2rem;
     padding-bottom: 1rem;
@@ -44,8 +103,7 @@ const { name, description, price, image1, slug, image } = Astro.props;
   a {
     text-decoration: none;
   }
-  .container,
-  .container2 {
+  .container {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -56,8 +114,7 @@ const { name, description, price, image1, slug, image } = Astro.props;
     border-radius: 15px;
     filter: brightness(1.1);
   }
-  .price,
-  .price2 {
+  .price {
     margin-top: 1rem;
   }
 
@@ -101,6 +158,12 @@ const { name, description, price, image1, slug, image } = Astro.props;
     }
     img {
       width: 320px;
+    }
+    .reklame {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      margin-inline: 6rem;
+      gap: 30px;
     }
   }
 </style>
