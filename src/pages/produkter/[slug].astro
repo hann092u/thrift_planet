@@ -32,7 +32,9 @@ const { singleProduct } = Astro.props;
     <Navigation category={singleProduct.category} name={singleProduct.name} />
     <SingleProduct image1={`/img/${singleProduct.image1}`} image2={`/img/${singleProduct.image2}`} name={singleProduct.name} description={singleProduct.description} price={singleProduct.price + " DKK"} slug={singleProduct.slug} image="../img/blå_hjerte_forside" />
   </div>
-  <Footer image3="../img/general/bannerup.svg" />
+  <div class="footer">
+    <Footer image3="/img/general/bannerup.svg" />
+  </div>
 </MainLayout>
 
 <style>
