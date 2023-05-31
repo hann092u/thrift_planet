@@ -18,10 +18,12 @@ console.log(data);
 
 <MainLayout title="Webshop">
   <Banner />
-  <Header title="WEBSHOP" animation="/img/general/animation.svg">
-    <img class="desktop" src="./img/general/header_webshop.webp" alt="baggrund" />
-    <img class="mobil" src="/img/general/baggrund_mobil_shop.webp" alt="baggrund" />
-  </Header>
+  <div class="menu">
+    <Header title="WEBSHOP" animation="/img/general/animation.svg">
+      <img class="desktop" src="./img/general/header_webshop.webp" alt="baggrund" />
+      <img class="mobil" src="/img/general/baggrund_mobil_shop.webp" alt="baggrund" />
+    </Header>
+  </div>
   <main>
     <Categories title="KATEGORIER" />
     <div class="all_products">
@@ -51,7 +53,9 @@ console.log(data);
   .mobil {
     display: block;
   }
-
+  .menu {
+    margin-top: 2rem;
+  }
   @media (min-width: 800px) {
     .desktop {
       display: block;
