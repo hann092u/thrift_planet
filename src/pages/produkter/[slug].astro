@@ -27,7 +27,9 @@ const { singleProduct } = Astro.props;
 
 <MainLayout>
   <Banner />
-  <MenuBackgr />
+  <div class="menu">
+    <MenuBackgr />
+  </div>
   <div class="indhold">
     <Navigation category={singleProduct.category} name={singleProduct.name} />
     <SingleProduct image1={`/img/${singleProduct.image1}`} image2={`/img/${singleProduct.image2}`} name={singleProduct.name} description={singleProduct.description} price={singleProduct.price + " DKK"} slug={singleProduct.slug} image="../img/blå_hjerte_forside" />
@@ -62,6 +64,9 @@ const { singleProduct } = Astro.props;
   }
   .price {
     margin-top: 1rem;
+  }
+  .menu {
+    margin-top: 2rem;
   }
   @media (min-width: 800px) {
     .indhold {
