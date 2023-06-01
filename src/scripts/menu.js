@@ -9,6 +9,6 @@ burgerMenu.addEventListener("click", function () {
   menu.classList.toggle("overlay");
 });
 
-logoLink.addEventListener("click", function (event) {
-  event.stopPropagation();
+logoLink.addEventListener("click", function () {
+  menu.classList.remove("overlay");
 });
