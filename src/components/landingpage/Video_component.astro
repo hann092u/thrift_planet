@@ -6,7 +6,7 @@ import Button from "../Button.astro";
 <div class="container">
   <h2>{title}</h2>
   <div class="layout">
-    <video autoplay loop src="/img/general/output.webm"></video>
+    <video autoplay loop controls src="/img/general/output.webm"></video>
   </div>
   <div class="vis">
     <Button title="LÆS MERE" />
@@ -99,7 +99,8 @@ import Button from "../Button.astro";
     }
     video {
       width: 200%;
-      height: 200%;
+      height: 500px;
+      object-fit: cover;
     }
   }
 </style>
