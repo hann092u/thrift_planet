@@ -60,17 +60,25 @@ const { title, image1, image2 } = Astro.props;
     .planet {
       grid-column: 1;
       grid-row: 2;
-      width: 100%;
+      width: 90%;
       height: auto;
       display: flex;
       flex-direction: row;
       justify-content: center;
       align-self: center;
       margin-left: 10%;
+      z-index: 1;
     }
 
     p {
       margin-top: 20px;
+    }
+
+    .sky_down {
+      width: 106.5%;
+      margin-top: -5rem;
+      transform: translateX(-3%);
+      margin-left: 4px;
     }
   }
 </style>
