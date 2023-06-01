@@ -26,7 +26,9 @@ console.log(data);
       {data.map((product) => <ProductCardCategory image1={`/img/${product.image1}`} name={product.name} description={product.description} price={product.price + " DKK"} slug={product.slug} />)}
     </div>
   </div>
-  <Footer />
+  <div class="footer">
+    <Footer />
+  </div>
 </MainLayout>
 
 <style>
