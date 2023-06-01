@@ -1,6 +1,6 @@
 const burgerMenu = document.querySelector("#burger-menu");
 const menu = document.querySelector("#menu");
-const logoLink = document.querySelector(".logo_a");
+const logoLink = document.querySelector(".logo_li");
 
 menu.classList.remove("overlay");
 
