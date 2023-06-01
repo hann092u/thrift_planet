@@ -10,6 +10,9 @@ burgerMenu.addEventListener("click", function () {
 });
 
 logoLink.addEventListener("click", function (event) {
-  event.preventDefault(); // Prevents the default behavior of the link
-  menu.classList.remove("overlay");
+  if (menu.classList.contains("overlay")) {
+    event.preventDefault(); // Prevents the default behavior of the link
+    menu.classList.remove("overlay");
+    burgerMenu.classList.remove("close");
+  }
 });
