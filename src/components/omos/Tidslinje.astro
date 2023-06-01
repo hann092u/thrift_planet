@@ -2,7 +2,7 @@
 ---
 
 <div class="grid_1">
-  <h2>TIDLINJE FOR BUTIKKEN</h2>
+  <h2>TIDSLINJE FOR BUTIKKEN</h2>
   <div class="baggrund"><slot /></div>
   <div class="tidslinje">
     <img src="/omos/tidslinje2.svg" alt="tidslinje" />
@@ -59,12 +59,16 @@
     .tidslinje {
       grid-column: 2;
       grid-row: 2;
-      width: 70%;
+      width: 100%;
       z-index: 1;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
+    }
+
+    .tidslinje img {
+      width: 70%;
     }
 
     .baggrund {
@@ -78,6 +82,7 @@
       grid-column: 2;
       grid-row: 1;
       color: white;
+      margin-top: 100px;
     }
   }
 </style>
