@@ -2,21 +2,23 @@
 ---
 
 <button id="burger-menu">
-  <span>menu</span>
+  <span></span>
 </button>
-
-<nav id="menu">
-  <ul>
-    <li><a href="/omos">OM OS</a></li>
-    <li><a href="/kontakt">KONTAKT & FAQ</a></li>
-    <li class="logo_li">
-      <a class="logo_a" href="/"><img class="logo" src="/img/general/Logo_smiley.svg" alt="logo" /></a>
-    </li>
-    <li><a href="/webshop">WEBSHOP</a></li>
-    <li><a href="/#">KURV</a></li>
-  </ul>
-</nav>
-
+<div>
+  <nav id="menu">
+    <ul>
+      <li><a href="/omos">OM OS</a></li>
+      <li class="logo-drop">
+        <li><a href="/kontakt">KONTAKT & FAQ</a></li>
+        <li class="logo_li">
+          <a class="logo_a" href="/"><img class="logo" src="/img/general/Logo_smiley.svg" alt="logo" /></a>
+        </li>
+        <li><a href="/webshop">WEBSHOP</a></li>
+        <li><a href="/#">KURV</a></li>
+      </li>
+    </ul>
+  </nav>
+</div>
 <script src="../scripts/menu.js"></script>
 
 <style>
@@ -26,12 +28,10 @@
   img {
     width: 100%;
   }
-  ul {
-    list-style: none;
-  }
   ul li {
     font-family: "Alata";
     font-size: 1.5rem;
+    list-style: none;
   }
 
   li a {
@@ -42,8 +42,8 @@
     padding: 4px 20px;
     text-align: center;
   }
-  #menu {
-    padding-right: 2rem;
+  #menu li {
+    margin-bottom: 10px;
   }
   #menu ul {
     display: flex;
@@ -52,6 +52,10 @@
     margin-top: 1rem;
     margin: 20px;
     justify-content: space-between;
+    position: absolute;
+    top: 2rem;
+    left: 5%;
+    width: 80%;
   }
   .logo-drop {
     display: none;
@@ -63,6 +67,7 @@
   }
   #menu .logo_a:hover {
     border: transparent;
+    padding: 4px 24px;
     filter: brightness(1.2);
   }
 
@@ -71,7 +76,7 @@
     display: none;
     border: none;
     background: transparent;
-    margin: 25px;
+    margin: 2rem;
     cursor: pointer;
     height: 27px;
     width: 27px;
@@ -81,10 +86,8 @@
     z-index: 2;
   }
   .logo_li {
-    width: 80px;
-    padding: 4px;
+    width: 50px;
   }
-
   /* Rest of the CSS */
 
   @media (max-width: 1180px) {
@@ -94,46 +97,43 @@
     #menu a:hover {
       border: 4px solid var(--brand-color-purple);
       border-radius: 45px;
-      padding: 4px 10px;
+      padding-block: 4px;
     }
-
     .logo_li {
-      width: 80px;
+      width: 50px;
     }
     li a {
       color: white;
       text-decoration: none;
       border: 4px solid transparent;
       border-radius: 45px;
-      padding: 4px 10px;
+      padding-block: 4px;
       text-align: center;
-    }
-
-    .logo_a {
-      padding: 4px 1px;
-    }
-    #menu .logo_a:hover {
-      border: none;
-      padding: 5px;
-      filter: brightness(1.2);
     }
   }
   @media screen and (max-width: 800px) {
     .logo_a {
       position: fixed;
-      top: 1.5px;
+      top: 10px;
       left: 0;
       visibility: visible;
       z-index: 10;
       margin: 1rem;
+      margin-top: 2rem;
       padding: 5px;
       text-align: left;
     }
 
+    div {
+      overflow: hidden;
+    }
+    .logo-drop {
+      display: none;
+    }
     #burger-menu {
       display: block;
       position: fixed;
-      top: 0.5rem;
+      top: 1.2rem;
     }
     #burger-menu span,
     #burger-menu span:before,
@@ -203,7 +203,6 @@
     }
     .logo {
       width: 15%;
-      margin-top: px;
     }
     #menu ul {
       padding: 0;
