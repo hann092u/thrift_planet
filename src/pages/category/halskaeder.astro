@@ -17,7 +17,9 @@ console.log(data);
 
 <MainLayout>
   <Banner />
-  <MenuBackgr />
+  <div class="menu">
+    <MenuBackgr />
+  </div>
   <div class="all_products">
     <h2>HALSKÆDER</h2>
     <div class="products">
@@ -31,6 +33,9 @@ console.log(data);
   h2 {
     padding: 2rem;
     color: var(--brand-color-purple);
+  }
+  .menu {
+    margin-top: 2rem;
   }
   @media (min-width: 800px) {
     .all_products {
