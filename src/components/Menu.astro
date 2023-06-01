@@ -7,13 +7,15 @@
 
 <nav id="menu">
   <ul>
-    <li><a href="/omos">OM OS</a></li>
-    <li><a href="/kontakt">KONTAKT & FAQ</a></li>
-    <li class="logo_li">
-      <a class="logo_a" href="/"><img class="logo" src="/img/general/Logo_smiley.svg" alt="logo" /></a>
+    <li class="logo-drop">
+      <li><a href="/omos">OM OS</a></li>
+      <li><a href="/kontakt">KONTAKT & FAQ</a></li>
+      <li class="logo_li">
+        <a class="logo_a" href="/"><img class="logo" src="/img/general/Logo_smiley.svg" alt="logo" /></a>
+      </li>
+      <li><a href="/webshop">WEBSHOP</a></li>
+      <li><a href="/#">KURV</a></li>
     </li>
-    <li><a href="/webshop">WEBSHOP</a></li>
-    <li><a href="/#">KURV</a></li>
   </ul>
 </nav>
 
@@ -118,6 +120,9 @@
     }
   }
   @media screen and (max-width: 800px) {
+    .logo-drop {
+      display: none;
+    }
     .logo_a {
       position: fixed;
       top: 5px;
