@@ -17,20 +17,27 @@ console.log(data);
 
 <MainLayout>
   <Banner />
-  <MenuBackgr />
+  <div class="menu">
+    <MenuBackgr />
+  </div>
   <div class="all_products">
     <h2>HALSKÆDER</h2>
     <div class="products">
       {data.map((product) => <ProductCardCategory image1={`/img/${product.image1}`} name={product.name} description={product.description} price={product.price + " DKK"} slug={product.slug} />)}
     </div>
   </div>
-  <Footer />
+  <div class="footer">
+    <Footer />
+  </div>
 </MainLayout>
 
 <style>
   h2 {
     padding: 2rem;
     color: var(--brand-color-purple);
+  }
+  .menu {
+    margin-top: 2rem;
   }
   @media (min-width: 800px) {
     .all_products {
