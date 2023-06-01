@@ -75,9 +75,11 @@
     cursor: pointer;
     height: 27px;
     width: 27px;
-    position: absolute;
-    top: 0;
-    right: 0;
+    position: relative;
+    right: 0.5rem;
+    /* position: absolute;
+ top: 0;
+    right: 0;*/
     z-index: 2;
   }
   .logo_li {
@@ -118,7 +120,7 @@
   @media screen and (max-width: 800px) {
     .logo_a {
       position: fixed;
-      top: 1.5px;
+      top: 5px;
       left: 0;
       visibility: visible;
       z-index: 10;
@@ -187,6 +189,7 @@
       top: 0;
       left: 0;
       height: 0;
+      opacity: 1;
       visibility: hidden;
       text-align: center;
       padding-top: 20px;
@@ -199,7 +202,7 @@
       background: var(--bg);
     }
     .logo {
-      width: 15%;
+      width: 18%;
     }
     #menu ul {
       padding: 0;
