@@ -26,7 +26,6 @@ const { title, image2 } = Astro.props;
 <style>
   .grid_1 {
     background-color: var(--bg);
-    padding: 3rem;
   }
 
   h2 {
@@ -44,27 +43,31 @@ const { title, image2 } = Astro.props;
   @media (min-width: 800px) {
     .grid_1 {
       display: grid;
-      grid-template-columns: 1.5fr 1fr;
-      grid-row: 0.5fr 2fr 0.5fr;
+      grid-template-columns: 0.1fr 1fr 1fr;
+      grid-template-rows: 2fr;
       background-color: var(--bg);
     }
 
     .adresse {
-      grid-column: 2;
-      grid-row: 1/2;
+      grid-column: 3;
+      grid-row: 1;
       margin-top: 3rem;
-      margin-right: 8rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
     }
 
     .skilt {
-      grid-column: 1;
-      grid-row: 1/2;
-      width: 70%;
-      margin-left: 8rem;
+      grid-column: 2;
+      grid-row: 1;
+      justify-content: center;
+      align-items: center;
     }
 
     h5 {
       margin-top: 3rem;
+      font-size: 2rem;
     }
   }
 </style>
