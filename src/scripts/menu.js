@@ -10,6 +10,8 @@ burgerMenu.addEventListener("click", function () {
 });
 
 logoLink.addEventListener("click", function (event) {
-  event.preventDefault(); // Prevent the default behavior of the logo link (e.g., navigating to a new page)
-  menu.classList.remove("overlay");
+  if (menu.classList.contains("overlay")) {
+    event.preventDefault();
+    menu.classList.remove("overlay");
+  }
 });
