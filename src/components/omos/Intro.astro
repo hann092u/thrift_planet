@@ -6,6 +6,7 @@ const { title, image1, image2 } = Astro.props;
   <div class="tekst_planet">
     <h2>{title}</h2>
     <p>I butikken Thrift Planet sælger vi secondhand og vintage tøj fra Berlin & Italien, som vi har udvalgt helt specielt til jer. Alt tøjet er udvalgt af os efter trends, farver, kvalitet og selvfølgelig også bare efter over all niceness. Vi har en forkærlighed for 90’er og 00’er mode, og så elsker vi second hand basic styles i god kvalitet.</p>
+    <p>Ideen bag Thrift Planet er at skabe en cute vintage shop, som skal være overskuelig og tilbyde secondhand og vintage tøj, der matcher tidens ånd og trends. Vi ønsker at give vores kunder en lækker butiksoplevelse. At gøre det nemt at finde secondhand eller vintage, der passer ind i en moderne garderobe. Butikken skal være en dynamisk vintage shop med flow i tøj og udvalg – hvor man som kunde altid kan finde noget nyt og overraskende.</p>
     <h4>NEWS EVERY WEEK!</h4>
     <p>Du kan finde nye styles på stativerne hver uge!</p>
   </div>
@@ -27,7 +28,6 @@ const { title, image1, image2 } = Astro.props;
   .planet {
     margin: 20px;
   }
-
   h2 {
     color: white;
     margin-bottom: 2rem;
@@ -39,12 +39,13 @@ const { title, image1, image2 } = Astro.props;
   }
   p {
     text-align: center;
+    margin: 20px;
   }
 
   @media (min-width: 800px) {
     .grid_1 {
       display: grid;
-      grid-template-columns: 1.5fr 1fr;
+      grid-template-columns: 1fr 1fr;
       grid-row: 0.5fr 2fr 0.5fr;
       background-color: var(--bg);
     }
@@ -52,7 +53,6 @@ const { title, image1, image2 } = Astro.props;
     .tekst_planet {
       grid-column: 2;
       grid-row: 2;
-      margin-top: 3rem;
       margin-inline: 3rem;
       padding-right: 2rem;
     }
@@ -60,6 +60,13 @@ const { title, image1, image2 } = Astro.props;
     .planet {
       grid-column: 1;
       grid-row: 2;
+      width: 100%;
+      height: auto;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-self: center;
+      margin-left: 10%;
     }
 
     p {
