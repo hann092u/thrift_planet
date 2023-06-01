@@ -24,8 +24,9 @@ const { image3 } = Astro.props;
     display: flex;
     gap: 20px;
     justify-content: center;
-    padding-inline: 7rem;
+    margin-inline: 3rem;
   }
+
   .box {
     display: block;
     background-color: #dac5f2;
@@ -52,6 +53,7 @@ const { image3 } = Astro.props;
   .footer_icons {
     border-radius: 50%;
     border: 3px solid white;
+    width: 100%;
   }
 
   .sky_up {
@@ -63,7 +65,7 @@ const { image3 } = Astro.props;
 
   @media (min-width: 800px) {
     .footer_icons {
-      width: 10%;
+      width: 80%;
     }
     .footer_icons:hover {
       border: 3px solid var(--brand-color-purple);
