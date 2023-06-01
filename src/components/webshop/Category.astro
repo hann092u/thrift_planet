@@ -12,12 +12,15 @@ const { title, image, page } = Astro.props;
 </section>
 
 <style>
-  section {
-    display: grid;
-    grid-template-columns: auto;
-    grid-template-rows: auto;
-    width: 100%;
-    padding-inline: 2rem;
+  .section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 300px;
+  }
+
+  .text {
+    text-align: center;
   }
 
   a {
